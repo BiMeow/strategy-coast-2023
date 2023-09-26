@@ -2,18 +2,67 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "FirsNeue";
+  src: url("../../public/font/TTFirsNeueTrial_Regular.eot");
+  src: url("../../public/font/TTFirsNeueTrial_Regular.eot")
+      format("embedded-opentype"),
+    url("../../public/font/TTFirsNeueTrial_Regular.woff2") format("woff2"),
+    url("../../public/font/TTFirsNeueTrial_Regular.woff") format("woff"),
+    url("../../public/font/TTFirsNeueTrial_Regular.ttf") format("truetype"),
+    url("../../public/font/TTFirsNeueTrial_Regular.svg#TTFirsNeueTrial_Regular")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "FirsNeue_Medium";
+  src: url("../../public/font/TTFirsNeueTrial_Medium.eot");
+  src: url("../../public/font/TTFirsNeueTrial_Medium.eot")
+      format("embedded-opentype"),
+    url("../../public/font/TTFirsNeueTrial_Medium.woff2") format("woff2"),
+    url("../../public/font/TTFirsNeueTrial_Medium.woff") format("woff"),
+    url("../../public/font/TTFirsNeueTrial_Medium.ttf") format("truetype"),
+    url("../../public/font/TTFirsNeueTrial_Medium.svg#TTFirsNeueTrial_Medium")
+      format("svg");
+  font-weight: medium;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "FirsNeue_Bold";
+  src: url("../../public/font/TTFirsNeueTrial_Bold.eot");
+  src: url("../../public/font/TTFirsNeueTrial_Bold.eot")
+      format("embedded-opentype"),
+    url("../../public/font/TTFirsNeueTrial_Bold.woff2") format("woff2"),
+    url("../../public/font/TTFirsNeueTrial_Bold.woff") format("woff"),
+    url("../../public/font/TTFirsNeueTrial_Bold.ttf") format("truetype"),
+    url("../../public/font/TTFirsNeueTrial_Bold.svg#TTFirsNeueTrial_Bold")
+      format("svg");
+  font-weight: bold;
+  font-style: normal;
+}
+
 body {
   overflow-x: hidden;
+  font-family: "FirsNeue";
+  font-weight: 400;
   font-size: 16px;
-  line-height: 1.3;
+  line-height: 1;
+}
+
+p {
+  line-height: 1.2;
 }
 
 @layer components {
   .mainPage {
-    @apply min-h-screen;
+    @apply min-h-screen py-[20px];
   }
+
   .cusContainer {
-    @apply w-[88%] mx-auto tl-l:px-[20px] tl-l:w-full;
+    @apply px-[20px];
   }
 
   .secSpacing {
