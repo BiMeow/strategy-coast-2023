@@ -17,8 +17,16 @@ const config: Config = {
         mb: { max: "767px" },
       },
 
+      fontFamily: {
+        FirsNeue: ["FirsNeue"],
+        FirsNeueMedium: ["FirsNeue_Medium"],
+        FirsNeueBold: ["FirsNeue_Bold"],
+      },
+
       colors: {
         green: "#8FF80E",
+        greenDark: "#07171c",
+        grey: "#2F2F2F",
       },
     },
   },
