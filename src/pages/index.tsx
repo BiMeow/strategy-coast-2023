@@ -1,9 +1,12 @@
-import Image from "next/image";
-import { Inter } from "next/font/google";
 import MasterPage from "@/components/master/MasterPage";
+import dynamic from "next/dynamic";
 
-const inter = Inter({ subsets: ["latin"] });
+const PageHome = dynamic(() => import("@/components/pageContent/PageHome"));
 
 export default function Home() {
-  return <MasterPage>BiMeow</MasterPage>;
+  return (
+    <MasterPage>
+      <PageHome />
+    </MasterPage>
+  );
 }
