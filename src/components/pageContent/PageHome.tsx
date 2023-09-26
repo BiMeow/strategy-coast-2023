@@ -1,17 +1,18 @@
-import React from "react";
-import { useEffect, useState, useContext, useRef, memo, useMemo } from "react";
-import { useRouter } from "next/router";
-import SectionHomeBanner from "@/components/sections/home/SectionHomeBanner";
 import SectionHomeAbout from "@/components/sections/home/SectionHomeAbout";
+import SectionHomeBanner from "@/components/sections/home/SectionHomeBanner";
+import SectionHomeTraining from "@/components/sections/home/SectionHomeTraining";
+import { useRouter } from "next/router";
+import { memo } from "react";
 
 function PageHome({ ...props }) {
   const router = useRouter();
 
   return (
     <>
-      <div className={`PageHome mainPage bg-green`}>
+      <div className={`PageHome mainPage`}>
         <SectionHomeBanner />
         <SectionHomeAbout />
+        <SectionHomeTraining />
       </div>
     </>
   );

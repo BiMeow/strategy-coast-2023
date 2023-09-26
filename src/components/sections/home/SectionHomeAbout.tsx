@@ -1,16 +1,15 @@
-import React from "react";
-import { useEffect, useState, useContext, useRef, memo, useMemo } from "react";
-import { useRouter } from "next/router";
 import { IconArrow } from "@/components/elements/Icon";
+import { useRouter } from "next/router";
+import { memo } from "react";
 
 function SectionHomeAbout({ ...props }) {
   const router = useRouter();
 
   return (
     <>
-      <div className={`SectionHomeAbout mb-[100px]`}>
+      <div className={`SectionHomeAbout mb-[120px]`}>
         <div className="cusContainer">
-          <h2 className="text-[64px] mb-[75px]">
+          <h2 className="text-[63px] mb-[75px]">
             Strategy - chiến lược / Coast - bờ biển.
             <br />
             StrategyCoast® là nơi chúng tôi coach về strategy, và cũng là một
@@ -53,7 +52,7 @@ function SectionHomeAbout({ ...props }) {
                 Brand Growth Retreat®
               </h3>
 
-              <p className="text-[32px] text-justify">
+              <p className="text-[32px]">
                 Chương trình huấn luyện Tăng trưởng thương hiệu
               </p>
 
@@ -65,21 +64,53 @@ function SectionHomeAbout({ ...props }) {
 
           <div className="c2 w-[58%] px-[10px] relative z-10">
             <div className="relative rounded-[50px] overflow-hidden">
-              <div className="aspect-[800/940]"></div>
+              <div className="aspect-[800/940] dt-exl:aspect-[800/600]"></div>
+
               <img src="/images/home/about-1.jpg" alt="" className="absImg" />
+
+              <div className="content absolute z-10 w-full h-full top-0 left-0 pt-[130px] px-[70px]">
+                <h3 className="text-[64px] text-white mb-[70px]">
+                  Chúng tôi mang đến cho bạn những gì?
+                </h3>
+
+                <div className="grid grid-cols-[36%_64%] mx-[-25px] text-white gap-y-[25px]">
+                  <p className="text-[32px] px-[25px]">
+                    Thể nghiệm tư duy truyền cảm hứng®
+                  </p>
+                  <p className="px-[25px]">
+                    Nếu bạn đang trăn trở nâng cao năng lực của chính mình hay
+                    đội ngũ nhân viên, tìm kiếm giải pháp tăng trưởng thương
+                    hiệu, đau đầu với việc tìm ra ý tưởng truyền thông hay sản
+                    phẩm mới, chúng tôi sẽ giúp bạn thiết kế giải pháp huấn
+                    luyện và hội thảo phù hợp.
+                  </p>
+                  <p className="text-[20px] font-FirsNeueMedium px-[25px] pr-[45px]">
+                    Hơn cả chương trình đào tạo hay tư vấn, chúng tôi giúp bạn
+                    phát triển tư duy, khai mở tầm nhìn và tìm ra giải pháp
+                    thông qua quá trình huấn luyện & hội thảo.
+                  </p>
+                  <p className="px-[25px]">
+                    Chúng tôi, những huấn luyện viên với kinh nghiệm phù hợp,
+                    nền tảng lý thuyết vững chắc và thực tiễn, kết hợp cùng
+                    phương pháp huấn luyện thể nghiệm tư duy truyền cảm hứng®,
+                    hy vọng sẽ cùng bạn tìm ra được những giải pháp chiến lược
+                    và sáng tạo hiệu quả cho thương hiệu của mình.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
 
           <img
             src="/images/home/deco-wave.png"
             alt=""
-            className="absolute top-[30px] left-0 w-full"
+            className="absolute top-[30px] left-0 w-full max-h-[500px] object-fill"
           />
 
           <img
             src="/images/home/deco-wave.png"
             alt=""
-            className="absolute bottom-[-55px] left-0 w-full"
+            className="absolute bottom-[-55px] left-0 w-full max-h-[500px] object-fill"
           />
         </div>
       </div>

@@ -1,6 +1,5 @@
-import React from "react";
-import { useEffect, useState, useContext, useRef, memo, useMemo } from "react";
 import { useRouter } from "next/router";
+import { memo } from "react";
 
 function SectionHomeBanner({ ...props }) {
   const router = useRouter();
