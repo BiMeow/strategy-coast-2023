@@ -1,0 +1,247 @@
+import { useRouter } from "next/router";
+import { memo } from "react";
+
+function SectionBrandCourse({ ...props }) {
+  const router = useRouter();
+
+  return (
+    <>
+      <div className={`SectionBrandCourse mb-[160px]`}>
+        <div className="cusContainer">
+          <h2 className="text-[70px] text-green text-center mb-[50px]">
+            Chuyên gia huấn luyện
+          </h2>
+
+          <div className="px-[40px] py-[60px] border-4 border-green rounded-[50px] mb-[15px]">
+            <div className="flex flex-wrap mx-[-30px] text-green">
+              <div className="c1 w-[40%] px-[30px]">
+                <p className="text-[38px]">+ Nền tảng</p>
+              </div>
+
+              <div className="c2 w-[30%] px-[30px]">
+                <div className="flex space-x-[20px]">
+                  <div className="w-[45px] h-[45px] rounded-full border border-green flex items-center justify-center">
+                    <p className="text-[18px] leading-[1] mt-[3px]">01</p>
+                  </div>
+                  <div className="w-[calc(100%-45px)] pt-[15px]">
+                    <p className="font-FirsNeueMedium text-[24px] mb-[10px]">
+                      Issue Diagnosis
+                    </p>
+                    <p className="text-[18px] text-white">
+                      Chẩn đoán Hiện trạng & Rào cản Tăng trưởng của Thương hiệu
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="c3 w-[30%] px-[30px]">
+                <div className="pt-[15px]">
+                  <p className="font-FirsNeueMedium text-[24px] mb-[10px]">
+                    Bạn học được gì?
+                  </p>
+                  <p className="text-[18px] text-white">
+                    Cách tìm ra Vấn đề cốt lõi ngăn cản <br /> tiềm năng tăng
+                    trưởng của thương hiệu
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="px-[40px] py-[60px] border-4 border-green rounded-[50px] mb-[15px]">
+            <div className="flex flex-wrap mx-[-30px] text-green">
+              <div className="c1 w-[40%] px-[30px]">
+                <p className="text-[38px]">+ Chiến lược tăng trưởng</p>
+              </div>
+
+              <div className="c2 w-[30%] px-[30px] space-y-[45px]">
+                <div className="flex space-x-[20px]">
+                  <div className="w-[45px] h-[45px] rounded-full border border-green flex items-center justify-center">
+                    <p className="text-[18px] leading-[1] mt-[3px]">02</p>
+                  </div>
+                  <div className="w-[calc(100%-45px)] pt-[15px]">
+                    <p className="font-FirsNeueMedium text-[24px] mb-[10px]">
+                      Isegmentation, Targeting & Needstate
+                    </p>
+                    <p className="text-[18px] text-white">
+                      Chọn Phân khúc, hiểu Nhu cầu
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex space-x-[20px]">
+                  <div className="w-[45px] h-[45px] rounded-full border border-green flex items-center justify-center">
+                    <p className="text-[18px] leading-[1] mt-[3px]">03</p>
+                  </div>
+                  <div className="w-[calc(100%-45px)] pt-[15px]">
+                    <p className="font-FirsNeueMedium text-[24px] mb-[10px]">
+                      Growth through the core
+                    </p>
+                    <p className="text-[18px] text-white">
+                      Tăng trưởng thông qua cốt lõi hiện tại của thương hiệu
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex space-x-[20px]">
+                  <div className="w-[45px] h-[45px] rounded-full border border-green flex items-center justify-center">
+                    <p className="text-[18px] leading-[1] mt-[3px]">04</p>
+                  </div>
+                  <div className="w-[calc(100%-45px)] pt-[15px]">
+                    <p className="font-FirsNeueMedium text-[24px] mb-[10px]">
+                      Growth through stretching
+                    </p>
+                    <p className="text-[18px] text-white">
+                      Tăng trưởng thông qua mở rộng thương hiệu qua các sân chơi
+                      mới
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="c3 w-[30%] px-[30px] space-y-[45px]">
+                <div className="pt-[15px]">
+                  <p className="font-FirsNeueMedium text-[24px] mb-[10px]">
+                    Bạn học được gì?
+                  </p>
+                  <p className="text-[18px] text-white">
+                    Segmentation & Targeting <br /> Needstate thinking
+                  </p>
+                </div>
+
+                <div className="pt-[15px]">
+                  <p className="font-FirsNeueMedium text-[24px] mb-[10px]">
+                    Bạn học được gì?
+                  </p>
+                  <p className="text-[18px] text-white">
+                    Cốt lõi của thương hiệu <br /> Insight <br /> Positioning
+                  </p>
+                </div>
+
+                <div className="pt-[15px]">
+                  <p className="font-FirsNeueMedium text-[24px] mb-[10px]">
+                    Bạn học được gì?
+                  </p>
+                  <p className="text-[18px] text-white">
+                    Kiến trúc thương hiệu <br /> Quản lý danh mục sản phẩm{" "}
+                    <br /> Phát triển sản phẩm mới
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="px-[40px] py-[60px] border-4 border-green rounded-[50px] mb-[15px]">
+            <div className="flex flex-wrap mx-[-30px] text-green">
+              <div className="c1 w-[40%] px-[30px]">
+                <p className="text-[38px]">+ Chiến thuật tăng trưởng</p>
+              </div>
+
+              <div className="c2 w-[30%] px-[30px]">
+                <div className="flex space-x-[20px]">
+                  <div className="w-[45px] h-[45px] rounded-full border border-green flex items-center justify-center">
+                    <p className="text-[18px] leading-[1] mt-[3px]">05</p>
+                  </div>
+                  <div className="w-[calc(100%-45px)] pt-[15px]">
+                    <p className="font-FirsNeueMedium text-[24px] mb-[10px]">
+                      Trigger new behavior
+                    </p>
+                    <p className="text-[18px] text-white">
+                      Thay đổi, tạo Hành vi mới 
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="c3 w-[30%] px-[30px]">
+                <div className="pt-[15px]">
+                  <p className="font-FirsNeueMedium text-[24px] mb-[10px]">
+                    Bạn học được gì?
+                  </p>
+                  <p className="text-[18px] text-white">
+                    Khoa học Hành vi trong Marketing <br /> Cách thay đổi, tạo
+                    Hành vi mới
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="px-[40px] py-[60px] border-4 border-green rounded-[50px] mb-[15px]">
+            <div className="flex flex-wrap mx-[-30px] text-green">
+              <div className="c1 w-[40%] px-[30px]">
+                <p className="text-[38px]">+ Phản tư</p>
+              </div>
+
+              <div className="c2 w-[30%] px-[30px]">
+                <div className="flex space-x-[20px]">
+                  <div className="w-[45px] h-[45px] rounded-full border border-green flex items-center justify-center">
+                    <p className="text-[18px] leading-[1] mt-[3px]">01</p>
+                  </div>
+                  <div className="w-[calc(100%-45px)] pt-[15px]">
+                    <p className="font-FirsNeueMedium text-[24px] mb-[10px]">
+                      Reflection
+                    </p>
+                    <p className="text-[18px] text-white">
+                      Đối chiếu & Kết thúc khoá học
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="c3 w-[30%] px-[30px]">
+                <div className="pt-[15px]">
+                  <p className="font-FirsNeueMedium text-[24px] mb-[10px]">
+                    Bạn học được gì?
+                  </p>
+                  <p className="text-[18px] text-white">
+                    Thực hành trên bộ Toolkit <br /> Trình bày, Thảo luận, học
+                    hỏi lẫn nhau <br /> Tự đối chiếu
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="px-[40px] py-[60px] bg-green border-4 border-green rounded-[50px] mb-[15px]">
+            <div className="flex flex-wrap mx-[-30px] text-greenDark">
+              <div className="c1 w-[40%] px-[30px]">
+                <p className="text-[38px]">Chi phí khóa học:</p>
+                <p>(Chưa bao gồm VAT)</p>
+              </div>
+
+              <div className="c2 w-[30%] px-[30px]">
+                <div className="flex space-x-[20px]">
+                  <div className="w-[45px] h-[45px] rounded-full border border-green flex items-center justify-center">
+                    <p className="text-[18px] leading-[1] mt-[3px]"></p>
+                  </div>
+                  <div className="w-[calc(100%-45px)] ">
+                    <div className="mb-[10px]">
+                      <p className="text-[24px] font-FirsNeueMedium">
+                        Early Bird
+                      </p>
+                      <p>(trước ngày 5/10/2023)</p>
+                    </div>
+                    <p className="text-[28px] font-FirsNeueBold">10,000,000đ</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="c3 w-[30%] px-[30px]">
+                <div className="">
+                  <div className="mb-[10px]">
+                    <p className="text-[24px] font-FirsNeueMedium">Regular</p>
+                    <p>(sau ngày 5/10/2023)</p>
+                  </div>
+                  <p className="text-[28px] font-FirsNeueBold">11,000,000đ</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
+
+export default memo(SectionBrandCourse);

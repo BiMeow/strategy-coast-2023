@@ -1,4 +1,5 @@
 import { IconArrow } from "@/components/elements/Icon";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import { memo } from "react";
 
@@ -43,7 +44,7 @@ function SectionHomeAbout({ ...props }) {
               </p>
             </div>
 
-            <div className="course relative px-[50px] pt-[75px] pb-[150px] bg-[#12DE00] rounded-[50px]">
+            <div className="course relative px-[50px] pt-[75px] pb-[150px] bg-[#12DE00] rounded-[50px] duration-500 hover:shadow-[0px_0px_10px_#0004]">
               <h4 className="uppercase text-[18px] tracking-[2px] mb-[30px]">
                 KHÓA ĐẶC BIỆT
               </h4>
@@ -59,6 +60,8 @@ function SectionHomeAbout({ ...props }) {
               <div className="icon absolute bottom-[50px] right-[50px]">
                 <IconArrow />
               </div>
+
+              <Link href={"/BrandGrowthRetreat"} className="absImg"></Link>
             </div>
           </div>
 
