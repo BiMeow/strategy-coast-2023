@@ -7,17 +7,17 @@ const Loading = () => {
     <>
       <div
         className={`
-                wrapLoading fixed inset-0 z-[9999] flex h-screen w-screen items-center justify-center overflow-hidden duration-700
-                ${isLoading ? "" : "scale-0 rounded-full opacity-0"}
-                `}
+        wrapLoading fixed inset-0 z-[9999] flex h-screen w-screen items-center justify-center overflow-hidden duration-700
+        ${isLoading ? "" : "scale-0 rounded-full opacity-0"}
+        `}
       >
         <div className="overlay absolute left-0 top-0 h-full w-full //bg-[#0007] bg-greenDark backdrop-blur-[40px]"></div>
-        <div className="logo relative w-[200px] rounded-[50%] overflow-hidden bg-green">
+        <div className="logo relative w-[200px] rounded-full overflow-hidden bg-greenDark">
           <div className="aspect-1"></div>
           <img
-            src="/images/home/deco-wave.png"
+            src="/images/loader.png"
             alt=""
-            className="move absolute w-[400px] h-full max-w-none top-0 left-0"
+            className="move absolute w-[500px] h-full max-w-none top-0 left-0"
           />
         </div>
       </div>
@@ -44,7 +44,7 @@ const Loading = () => {
             transform: translateX(0);
           }
           100% {
-            transform: translateX(-200px);
+            transform: translateX(-300px);
           }
         }
       `}</style>

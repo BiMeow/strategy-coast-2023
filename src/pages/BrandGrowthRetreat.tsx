@@ -7,7 +7,7 @@ const PageBrandGrowthRetreat = dynamic(
 
 export default function BrandGrowthRetreat() {
   return (
-    <MasterPage isHome={false} activeNav={1}>
+    <MasterPage isHome={false} activeNav={1} title={"Brand Growth Retreat"}>
       <PageBrandGrowthRetreat />
     </MasterPage>
   );
