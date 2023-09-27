@@ -42,16 +42,20 @@ function SectionHomeTraining({ ...props }) {
             {listTraining.map((e: any, i: number) => (
               <div
                 className={`
-                itemTraining relative w-1/3 px-[8px]
+                itemTraining group relative w-1/3 px-[8px]
                 tl-p:w-full tl-p:mb-[20px]
                 ${i == 1 ? "mt-[40px] tl-p:mt-0" : ""}
                 `}
                 key={i}
               >
                 <div className="relative">
-                  <div className="image relative rounded-[50px] overflow-hidden">
+                  <div className="image relative rounded-[50px] mb:rounded-[30px] overflow-hidden">
                     <div className="aspect-[455/585] tl-p:aspect-1"></div>
-                    <img src={e.image} alt="" className="absImg" />
+                    <img
+                      src={e.image}
+                      alt=""
+                      className="absImg duration-300 group-hover:scale-[1.05]"
+                    />
                   </div>
 
                   <div className="content absolute w-full left-0 top-1/2 -translate-y-1/2 px-[20px]">

@@ -50,7 +50,7 @@ body {
 }
 
 body {
-  overflow-x: hidden;
+  overflow-x: hidden !important;
   font-family: "FirsNeue";
   font-weight: 400;
   font-size: 16px;
@@ -60,15 +60,30 @@ body {
   &::-webkit-scrollbar {
     display: none;
   }
+  overflow-x: hidden;
 }
 
 p {
   line-height: 1.2;
 }
 
+.fadeUp,
+.fadeDown,
+.fadeRight,
+.fadeLeft,
+.fadeIn {
+  opacity: 0;
+}
+
+@media screen and (max-width: 767px) {
+  body {
+    font-size: 16px;
+  }
+}
+
 @layer components {
   .mainPage {
-    @apply min-h-screen;
+    @apply min-h-screen w-full;
   }
 
   .cusContainer {
@@ -88,10 +103,10 @@ p {
   }
 
   .btnMain {
-    @apply px-[60px] pt-[10px] pb-[7px] leading-[1] bg-greenDark text-green text-[28px] font-FirsNeueMedium rounded-[50px] duration-500 hover:text-white hover:shadow-[0px_0px_10px_#07171c];
+    @apply px-[60px] pt-[12px] pb-[10px] leading-[1] bg-greenDark text-green text-[28px] font-FirsNeueMedium rounded-[50px] mb:rounded-[30px] duration-500 hover:text-white hover:bg-[#07171cbb];
   }
 
   .btnMainGreen {
-    @apply px-[60px] pt-[10px] pb-[7px] leading-[1] bg-green text-greenDark text-[28px] font-FirsNeueMedium rounded-[50px] duration-500 hover:text-white hover:shadow-[0px_0px_10px_#bdff00];
+    @apply px-[60px] pt-[12px] pb-[10px] leading-[1] bg-green text-greenDark text-[28px] font-FirsNeueMedium rounded-[50px] mb:rounded-[30px] duration-500 hover:text-white hover:bg-[#bdff00bb];
   }
 }
