@@ -8,8 +8,8 @@ function Footer({ isHome = true, ...props }) {
     <>
       <div className={`Footer ${isHome ? "text-greenDark" : "text-green"}`}>
         <div className="cusContainer">
-          <div className="getInTouch flex flex-col items-center justify-center mb-[220px]">
-            <h2 className="font-FirsNeueMedium text-[120px] text-center mb-[25px]">
+          <div className="getInTouch flex flex-col items-center justify-center mb-[220px] tl-l:mb-[75px]">
+            <h2 className="font-FirsNeueMedium text-[120px] text-center mb-[25px] tl-l:text-[100px] tl-p:text-[80px] mb:text-[45px]">
               Bạn đã sẵn sàng?
             </h2>
             <button className={`${isHome ? "btnMain" : "btnMainGreen"}`}>
@@ -17,8 +17,8 @@ function Footer({ isHome = true, ...props }) {
             </button>
           </div>
 
-          <div className="contactInfo mb-[30px]">
-            <div className="flex justify-between">
+          <div className="contactInfo mb-[30px] mb:mb-[20px]">
+            <div className="flex flex-wrap justify-between">
               <div className="font-FirsNeueMedium">
                 <p>
                   Hotline: <a href="tel: 0969873300">0969873300</a> (Mr. Sang)
@@ -30,7 +30,7 @@ function Footer({ isHome = true, ...props }) {
                   </a>
                 </p>
               </div>
-              <div className="font-FirsNeueMedium text-right">
+              <div className="font-FirsNeueMedium text-right mb:text-left mb-w-full">
                 <p>
                   StrategyCoast® -{" "}
                   <span className="font-FirsNeue text-[12px]">
@@ -51,10 +51,10 @@ function Footer({ isHome = true, ...props }) {
             `}
           >
             <div className="flex justify-between">
-              <div className="font-FirsNeueMedium">
+              <div className="font-FirsNeueMedium mb:text-[14px]">
                 <p>Copyright 2023 © StrategyCoast®</p>
               </div>
-              <div className="font-FirsNeueMedium text-right">
+              <div className="font-FirsNeueMedium text-right mb:text-[14px]">
                 <p>
                   <a href="#">facebook</a> / <a href="#">instagram</a> /
                   <a href="#">linkedin</a>

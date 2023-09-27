@@ -12,9 +12,11 @@ function MasterPage({ isHome = true, activeNav = 2, ...props }: any) {
     <>
       <Providers>
         <main
-          className={`MasterPage min-h-screen py-[20px] ${
-            isHome ? "bg-green" : "bg-greenDark"
-          }`}
+          className={`
+          MasterPage min-h-screen py-[20px] 
+          mb:py-[10px]
+          ${isHome ? "bg-green" : "bg-greenDark"}
+          `}
         >
           <Header isHome={isHome} activeNav={activeNav} />
           <div className={`pageContent`}>{children}</div>

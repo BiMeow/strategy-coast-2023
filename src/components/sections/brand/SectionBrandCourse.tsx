@@ -6,7 +6,9 @@ function SectionBrandCourse({ ...props }) {
 
   return (
     <>
-      <div className={`SectionBrandCourse mb-[160px]`}>
+      <div
+        className={`SectionBrandCourse mb-[160px] tl-l:mb-[80px] mb:mb-[50px]`}
+      >
         <div className="cusContainer">
           <h2 className="text-[70px] text-green text-center mb-[50px]">
             Chuyên gia huấn luyện
@@ -14,16 +16,16 @@ function SectionBrandCourse({ ...props }) {
 
           <div className="px-[40px] py-[60px] border-4 border-green rounded-[50px] mb-[15px]">
             <div className="flex flex-wrap mx-[-30px] text-green">
-              <div className="c1 w-[40%] px-[30px]">
+              <div className="c1 w-[40%] mb:w-full mb-[20px] px-[30px]">
                 <p className="text-[38px]">+ Nền tảng</p>
               </div>
 
-              <div className="c2 w-[30%] px-[30px]">
+              <div className="c2 w-[30%] mb:w-full px-[30px]">
                 <div className="flex space-x-[20px]">
                   <div className="w-[45px] h-[45px] rounded-full border border-green flex items-center justify-center">
                     <p className="text-[18px] leading-[1] mt-[3px]">01</p>
                   </div>
-                  <div className="w-[calc(100%-45px)] pt-[15px]">
+                  <div className="w-[calc(100%-45px)] pt-[15px] mb:pt-0">
                     <p className="font-FirsNeueMedium text-[24px] mb-[10px]">
                       Issue Diagnosis
                     </p>
@@ -34,7 +36,7 @@ function SectionBrandCourse({ ...props }) {
                 </div>
               </div>
 
-              <div className="c3 w-[30%] px-[30px]">
+              <div className="c3 w-[30%] mb:w-full px-[30px]">
                 <div className="pt-[15px]">
                   <p className="font-FirsNeueMedium text-[24px] mb-[10px]">
                     Bạn học được gì?
@@ -50,16 +52,16 @@ function SectionBrandCourse({ ...props }) {
 
           <div className="px-[40px] py-[60px] border-4 border-green rounded-[50px] mb-[15px]">
             <div className="flex flex-wrap mx-[-30px] text-green">
-              <div className="c1 w-[40%] px-[30px]">
+              <div className="c1 w-[40%] mb:w-full mb-[20px] px-[30px]">
                 <p className="text-[38px]">+ Chiến lược tăng trưởng</p>
               </div>
 
-              <div className="c2 w-[30%] px-[30px] space-y-[45px]">
-                <div className="flex space-x-[20px]">
+              <div className="c2 w-[30%] mb:w-full px-[30px] space-y-[45px]">
+                <div className="flex flex-wrap">
                   <div className="w-[45px] h-[45px] rounded-full border border-green flex items-center justify-center">
                     <p className="text-[18px] leading-[1] mt-[3px]">02</p>
                   </div>
-                  <div className="w-[calc(100%-45px)] pt-[15px]">
+                  <div className="w-[calc(100%-45px)] pl-[20px] pl-[20px] pt-[15px] mb:pt-0 mb-[20px]">
                     <p className="font-FirsNeueMedium text-[24px] mb-[10px]">
                       Isegmentation, Targeting & Needstate
                     </p>
@@ -67,13 +69,21 @@ function SectionBrandCourse({ ...props }) {
                       Chọn Phân khúc, hiểu Nhu cầu
                     </p>
                   </div>
+                  <div className="w-full hidden mb:block">
+                    <p className="font-FirsNeueMedium text-[24px] mb-[10px]">
+                      Bạn học được gì?
+                    </p>
+                    <p className="text-[18px] text-white">
+                      Segmentation & Targeting <br /> Needstate thinking
+                    </p>
+                  </div>
                 </div>
 
-                <div className="flex space-x-[20px]">
+                <div className="flex flex-wrap">
                   <div className="w-[45px] h-[45px] rounded-full border border-green flex items-center justify-center">
                     <p className="text-[18px] leading-[1] mt-[3px]">03</p>
                   </div>
-                  <div className="w-[calc(100%-45px)] pt-[15px]">
+                  <div className="w-[calc(100%-45px)] pl-[20px] pt-[15px] mb:pt-0 mb-[20px]">
                     <p className="font-FirsNeueMedium text-[24px] mb-[10px]">
                       Growth through the core
                     </p>
@@ -81,13 +91,21 @@ function SectionBrandCourse({ ...props }) {
                       Tăng trưởng thông qua cốt lõi hiện tại của thương hiệu
                     </p>
                   </div>
+                  <div className="w-full hidden mb:block">
+                    <p className="font-FirsNeueMedium text-[24px] mb-[10px]">
+                      Bạn học được gì?
+                    </p>
+                    <p className="text-[18px] text-white">
+                      Cốt lõi của thương hiệu <br /> Insight <br /> Positioning
+                    </p>
+                  </div>
                 </div>
 
-                <div className="flex space-x-[20px]">
+                <div className="flex flex-wrap">
                   <div className="w-[45px] h-[45px] rounded-full border border-green flex items-center justify-center">
                     <p className="text-[18px] leading-[1] mt-[3px]">04</p>
                   </div>
-                  <div className="w-[calc(100%-45px)] pt-[15px]">
+                  <div className="w-[calc(100%-45px)] pl-[20px] pt-[15px] mb:pt-0 mb-[20px]">
                     <p className="font-FirsNeueMedium text-[24px] mb-[10px]">
                       Growth through stretching
                     </p>
@@ -96,10 +114,19 @@ function SectionBrandCourse({ ...props }) {
                       mới
                     </p>
                   </div>
+                  <div className="w-full hidden mb:block">
+                    <p className="font-FirsNeueMedium text-[24px] mb-[10px]">
+                      Bạn học được gì?
+                    </p>
+                    <p className="text-[18px] text-white">
+                      Kiến trúc thương hiệu <br /> Quản lý danh mục sản phẩm{" "}
+                      <br /> Phát triển sản phẩm mới
+                    </p>
+                  </div>
                 </div>
               </div>
 
-              <div className="c3 w-[30%] px-[30px] space-y-[45px]">
+              <div className="c3 w-[30%] mb:w-full px-[30px] space-y-[45px] mb:hidden">
                 <div className="pt-[15px]">
                   <p className="font-FirsNeueMedium text-[24px] mb-[10px]">
                     Bạn học được gì?
@@ -133,16 +160,16 @@ function SectionBrandCourse({ ...props }) {
 
           <div className="px-[40px] py-[60px] border-4 border-green rounded-[50px] mb-[15px]">
             <div className="flex flex-wrap mx-[-30px] text-green">
-              <div className="c1 w-[40%] px-[30px]">
+              <div className="c1 w-[40%] mb:w-full mb-[20px] px-[30px]">
                 <p className="text-[38px]">+ Chiến thuật tăng trưởng</p>
               </div>
 
-              <div className="c2 w-[30%] px-[30px]">
+              <div className="c2 w-[30%] mb:w-full px-[30px]">
                 <div className="flex space-x-[20px]">
                   <div className="w-[45px] h-[45px] rounded-full border border-green flex items-center justify-center">
                     <p className="text-[18px] leading-[1] mt-[3px]">05</p>
                   </div>
-                  <div className="w-[calc(100%-45px)] pt-[15px]">
+                  <div className="w-[calc(100%-45px)] pt-[15px] mb:pt-0">
                     <p className="font-FirsNeueMedium text-[24px] mb-[10px]">
                       Trigger new behavior
                     </p>
@@ -153,7 +180,7 @@ function SectionBrandCourse({ ...props }) {
                 </div>
               </div>
 
-              <div className="c3 w-[30%] px-[30px]">
+              <div className="c3 w-[30%] mb:w-full px-[30px]">
                 <div className="pt-[15px]">
                   <p className="font-FirsNeueMedium text-[24px] mb-[10px]">
                     Bạn học được gì?
@@ -169,16 +196,16 @@ function SectionBrandCourse({ ...props }) {
 
           <div className="px-[40px] py-[60px] border-4 border-green rounded-[50px] mb-[15px]">
             <div className="flex flex-wrap mx-[-30px] text-green">
-              <div className="c1 w-[40%] px-[30px]">
+              <div className="c1 w-[40%] mb:w-full mb-[20px] px-[30px]">
                 <p className="text-[38px]">+ Phản tư</p>
               </div>
 
-              <div className="c2 w-[30%] px-[30px]">
+              <div className="c2 w-[30%] mb:w-full px-[30px]">
                 <div className="flex space-x-[20px]">
                   <div className="w-[45px] h-[45px] rounded-full border border-green flex items-center justify-center">
                     <p className="text-[18px] leading-[1] mt-[3px]">01</p>
                   </div>
-                  <div className="w-[calc(100%-45px)] pt-[15px]">
+                  <div className="w-[calc(100%-45px)] pt-[15px] mb:pt-0">
                     <p className="font-FirsNeueMedium text-[24px] mb-[10px]">
                       Reflection
                     </p>
@@ -189,7 +216,7 @@ function SectionBrandCourse({ ...props }) {
                 </div>
               </div>
 
-              <div className="c3 w-[30%] px-[30px]">
+              <div className="c3 w-[30%] mb:w-full px-[30px]">
                 <div className="pt-[15px]">
                   <p className="font-FirsNeueMedium text-[24px] mb-[10px]">
                     Bạn học được gì?
@@ -205,29 +232,24 @@ function SectionBrandCourse({ ...props }) {
 
           <div className="px-[40px] py-[60px] bg-green border-4 border-green rounded-[50px] mb-[15px]">
             <div className="flex flex-wrap mx-[-30px] text-greenDark">
-              <div className="c1 w-[40%] px-[30px]">
+              <div className="c1 w-[40%] mb:w-full mb-[20px] px-[30px]">
                 <p className="text-[38px]">Chi phí khóa học:</p>
                 <p>(Chưa bao gồm VAT)</p>
               </div>
 
-              <div className="c2 w-[30%] px-[30px]">
-                <div className="flex space-x-[20px]">
-                  <div className="w-[45px] h-[45px] rounded-full border border-green flex items-center justify-center">
-                    <p className="text-[18px] leading-[1] mt-[3px]"></p>
+              <div className="c2 w-[30%] mb:w-full px-[30px]">
+                <div className="">
+                  <div className="mb-[10px]">
+                    <p className="text-[24px] font-FirsNeueMedium">
+                      Early Bird
+                    </p>
+                    <p>(trước ngày 5/10/2023)</p>
                   </div>
-                  <div className="w-[calc(100%-45px)] ">
-                    <div className="mb-[10px]">
-                      <p className="text-[24px] font-FirsNeueMedium">
-                        Early Bird
-                      </p>
-                      <p>(trước ngày 5/10/2023)</p>
-                    </div>
-                    <p className="text-[28px] font-FirsNeueBold">10,000,000đ</p>
-                  </div>
+                  <p className="text-[28px] font-FirsNeueBold">10,000,000đ</p>
                 </div>
               </div>
 
-              <div className="c3 w-[30%] px-[30px]">
+              <div className="c3 w-[30%] mb:w-full px-[30px]">
                 <div className="">
                   <div className="mb-[10px]">
                     <p className="text-[24px] font-FirsNeueMedium">Regular</p>
