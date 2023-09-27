@@ -5,7 +5,7 @@ const PageHome = dynamic(() => import("@/components/pageContent/PageHome"));
 
 export default function Home() {
   return (
-    <MasterPage>
+    <MasterPage activeNav={2}>
       <PageHome />
     </MasterPage>
   );

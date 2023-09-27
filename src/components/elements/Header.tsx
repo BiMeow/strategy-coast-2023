@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useRouter } from "next/router";
 import { memo, useEffect, useState } from "react";
 
@@ -81,6 +82,7 @@ function Header({ activeNav = 2, ...props }: any) {
               >
                 Brand Growth Retreat®
               </p>
+              <Link href="/BrandGrowthRetreat" className="absImg"></Link>
             </div>
             <div className="relative group cursor-pointer ">
               <p
@@ -99,6 +101,7 @@ function Header({ activeNav = 2, ...props }: any) {
               >
                 Giới thiệu StrategyCoast®
               </p>
+              <Link href="/" className="absImg"></Link>
             </div>
           </div>
         </div>

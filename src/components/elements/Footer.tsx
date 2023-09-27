@@ -1,18 +1,20 @@
 import { useRouter } from "next/router";
 import { memo } from "react";
 
-function Footer({ ...props }) {
+function Footer({ isHome = true, ...props }) {
   const router = useRouter();
 
   return (
     <>
-      <div className={`Footer`}>
+      <div className={`Footer ${isHome ? "text-greenDark" : "text-green"}`}>
         <div className="cusContainer">
           <div className="getInTouch flex flex-col items-center justify-center mb-[220px]">
-            <h2 className="text-[120px] text-center mb-[25px]">
+            <h2 className="font-FirsNeueMedium text-[120px] text-center mb-[25px]">
               Bạn đã sẵn sàng?
             </h2>
-            <button className="btnMain">Liên hệ chúng tôi</button>
+            <button className={`${isHome ? "btnMain" : "btnMainGreen"}`}>
+              Liên hệ chúng tôi
+            </button>
           </div>
 
           <div className="contactInfo mb-[30px]">
@@ -42,7 +44,12 @@ function Footer({ ...props }) {
             </div>
           </div>
 
-          <div className="copyright pt-[20px] border-t-4 border-greenDark">
+          <div
+            className={`
+            copyright pt-[20px] border-t-4
+            ${isHome ? "border-greenDark" : "border-green"}
+            `}
+          >
             <div className="flex justify-between">
               <div className="font-FirsNeueMedium">
                 <p>Copyright 2023 © StrategyCoast®</p>
