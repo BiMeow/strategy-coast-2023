@@ -26,14 +26,14 @@ function SectionBrandMoreInfo({ ...props }) {
     <>
       <div className={`SectionBrandMoreInfo mb-[135px]`}>
         <div className="cusContainer">
-          <div className="relative flex items-center -mx-[10px] mb-[90px]">
-            <div className="c1 w-[42%] px-[10px] relative z-10">
-              <div className="story pl-[55px] pr-[60px] py-[100px] bg-green rounded-[50px] mb-[16px]">
+          <div className="relative flex items-center -mx-[10px] mb-[90px] mb:mb-[40px]">
+            <div className="c1 w-[42%] px-[10px] relative z-10 tl-l:w-full">
+              <div className="who pl-[55px] pr-[60px] py-[100px] bg-green rounded-[50px] mb-[16px] mb:p-[30px]">
                 <h3 className="text-[56px] text-black mb-[35px]">
                   Chương trình này dành cho ai?
                 </h3>
 
-                <p className="text-greenDark text-[16px] text-justify pr-[20px]">
+                <p className="text-greenDark text-[16px] text-justify pr-[20px] tl-l:pr-0">
                   Marketers đã đi làm trên 2 năm kinh nghiệm. Cần góc nhìn Tư
                   duy chiến lược và cách để tăng trưởng Thương hiệu thực tiễn.
                   <br />
@@ -58,7 +58,43 @@ function SectionBrandMoreInfo({ ...props }) {
                 </p>
               </div>
 
-              <div className="course relative px-[60px] pt-[60px] pb-[80px] bg-[#12DE00] rounded-[50px]">
+              <div className="relative rounded-[50px] mb-[20px] overflow-hidden hidden tl-l:block">
+                <img src="/images/home/about-1.jpg" alt="" className="absImg" />
+
+                <div className="relative content py-[30px] px-[30px] text-white">
+                  <p className="text-[18px] uppercase tracking-[3px] mb-[15px] text-white mb:text-[14px]">
+                    Phương pháp huấn luyện.
+                  </p>
+
+                  <h3 className="text-[42px] text-white mb-[20px]">
+                    Thể nghiệm tư duy truyền cảm hứng®
+                  </h3>
+
+                  <p className="text-[20px] mb-[40px]">
+                    Chúng tôi giúp bạn{" "}
+                    <span className="font-FirsNeueMedium">KHAI MỞ</span> con
+                    đường tăng trưởng thương hiệu riêng của mình, bằng cách tạo
+                    ra một Trải nghiệm tràn đầy cảm hứng qua phương pháp Thể
+                    nghiệm tư duy®.
+                  </p>
+
+                  <p className="">
+                    “Thể nghiệm” tức là thể hiện ra thực tế và tự nghiệm ra đúng
+                    sai. Thay vì dạy kiến thức một chiều, Thể nghiệm tư duy® cho
+                    bạn khoảng không gian thể hiện tư duy, quan điểm và tự
+                    nghiệm ra con đường phù hợp nhất cho riêng thương hiệu của
+                    mình.
+                    <br />
+                    <br />
+                    Phương pháp này gợi mở bạn bằng những câu hỏi hay, truyền
+                    cảm hứng với các Case study đa dạng, đúc kết bằng những mô
+                    hình lý thuyết thực tiễn cao, và cho bạn chiêm nghiệm lại
+                    qua việc ứng dụng vào thách thức thực tế.
+                  </p>
+                </div>
+              </div>
+
+              <div className="benefit relative px-[60px] pt-[60px] pb-[80px] bg-[#12DE00] rounded-[50px] mb:p-[30px]">
                 <h3 className="text-[56px] text-greenDark mb-[25px]">
                   Bạn nhận được gì từ khóa huấn luyện?
                 </h3>
@@ -87,7 +123,7 @@ function SectionBrandMoreInfo({ ...props }) {
               </div>
             </div>
 
-            <div className="c2 w-[58%] px-[10px] relative z-10">
+            <div className="c2 w-[58%] px-[10px] relative z-10 tl-l:hidden">
               <div className="relative rounded-[50px] overflow-hidden">
                 <div className="aspect-[800/940] dt-exl:aspect-[800/600]"></div>
 
@@ -130,13 +166,13 @@ function SectionBrandMoreInfo({ ...props }) {
           </div>
 
           <div className="listCoach max-w-[990px] mx-auto">
-            <h2 className="text-[70px] text-green text-center mb-[90px]">
+            <h2 className="text-[70px] text-green text-center mb-[90px] mb:text-[36px] mb:mb-[40px]">
               Chuyên gia huấn luyện
             </h2>
-            <div className="list flex flex-wrap mx-[-25px]">
+            <div className="list flex flex-wrap justify-center mx-[-25px]">
               {listCoach.map((e: any, i: number) => (
                 <div
-                  className="itemCoach w-1/3 px-[25px] text-white text-center"
+                  className="itemCoach w-1/3 px-[25px] text-white text-center mb:w-full mb:mb-[75px]"
                   key={i}
                 >
                   <div className="image relative rounded-full overflow-hidden mb-[25px]">
@@ -144,7 +180,7 @@ function SectionBrandMoreInfo({ ...props }) {
                     <img src={e.image} alt="" className="absImg" />
                   </div>
 
-                  <h3 className="text-[18px]">{e.name}</h3>
+                  <h3 className="text-[18px] tl-p:text-[16px]">{e.name}</h3>
                   <p className="text-[48px] text-green">+</p>
                   <p>{e.description}</p>
                 </div>

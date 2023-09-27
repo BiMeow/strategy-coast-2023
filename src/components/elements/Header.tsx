@@ -9,6 +9,7 @@ function Header({ activeNav = 2, ...props }: any) {
   const [prevY, setPrevY] = useState<number>(0);
   const [showHeader, setShowHeader] = useState<boolean>(true);
   const [isTopPage, setIsTopPage] = useState<boolean>(true);
+  const [showMenu, setShowMenu] = useState<boolean>(true);
 
   const handleScroll = () => {
     let curY = window.scrollY;
@@ -57,14 +58,37 @@ function Header({ activeNav = 2, ...props }: any) {
     <>
       <div
         className={`
-        Header fixed w-full  pb-[20px] z-[444] top-0 left-0 px-[75px] duration-300
-        ${isTopPage ? "pt-[60px]" : "pt-[20px] bg-[#000d] backdrop-blur-[20px]"}
+        Header fixed w-full pb-[20px] z-[444] top-0 left-0 px-[75px] duration-300
+        tl-p:px-[30px]
+        ${
+          isTopPage
+            ? "pt-[60px] tl-p:pt-[30px]"
+            : "pt-[20px] bg-[#000d] backdrop-blur-[20px]"
+        }
         ${showHeader ? "" : "translate-y-[-100%]"}
         `}
       >
-        <div className="flex items-center justify-between">
+        <div className="flex flex-wrap items-center justify-between">
           <img src="/images/Logo.png" alt="" className="max-w-[180px]" />
-          <div className="flex space-x-[45px] text-white text-[20px] font-FirsNeueMedium">
+
+          <div
+            className={`
+            text-[40px] hidden cursor-pointer tl-p:block
+            ${showMenu ? "text-green" : "text-white"}
+            `}
+            onClick={() => setShowMenu(!showMenu)}
+          >
+            <p>&#x2022;&#x2022;&#x2022;</p>
+          </div>
+
+          <div
+            className={`
+            flex space-x-[45px] text-white text-[20px] font-FirsNeueMedium overflow-hidden duration-500
+            tl-p:w-full tl-p:justify-end tl-p:mt-[20px]
+            mb:text-[16px]
+            ${showMenu ? "max-h-[100px]" : "max-h-0 opacity-0"}
+            `}
+          >
             <div className="relative group cursor-pointer ">
               <p
                 className={`
@@ -84,6 +108,7 @@ function Header({ activeNav = 2, ...props }: any) {
               </p>
               <Link href="/BrandGrowthRetreat" className="absImg"></Link>
             </div>
+
             <div className="relative group cursor-pointer ">
               <p
                 className={`
