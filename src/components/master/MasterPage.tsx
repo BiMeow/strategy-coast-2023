@@ -5,6 +5,7 @@ import Loading from "@/components/elements/Loading";
 import Preloader from "@/components/elements/Preloader";
 import Head from "next/head";
 import { useRouter } from "next/router";
+import Script from "next/script";
 
 function MasterPage({
   isHome = true,
@@ -19,6 +20,17 @@ function MasterPage({
 
   return (
     <>
+      <Script src="https://www.googletagmanager.com/gtag/js?id=G-RNRQXSSZVJ" />
+      <Script id="google-analytics">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+ 
+          gtag('config', 'G-RNRQXSSZVJ');
+        `}
+      </Script>
+
       <Head>
         <title>{title}</title>
 
@@ -28,6 +40,7 @@ function MasterPage({
         <meta property="og:description" content={description} />
         <meta property="og:image" content={`/images/logo.png`} />
       </Head>
+      
       <Providers>
         <main
           className={`
