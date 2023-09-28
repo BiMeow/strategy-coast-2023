@@ -1,6 +1,7 @@
 import React from "react";
 import { useEffect, useState, useContext, useRef, memo, useMemo } from "react";
 import { useRouter } from "next/router";
+import gsap, { Back, Bounce } from "gsap";
 
 let listPartnerDark = [
   {
@@ -35,13 +36,30 @@ let listPartnerLight = [
 function SectionPartner({ isHome = true, ...props }: any) {
   const router = useRouter();
 
+  useEffect(() => {
+    setTimeout(() => {
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: ".listPartner",
+            start: "top 60%",
+          },
+        })
+        .fromTo(
+          ".itemPartner",
+          { scale: 0, autoAlpha: 0 },
+          { scale: 1, autoAlpha: 1, stagger: 0.3, ease: Bounce.easeInOut }
+        );
+    }, 1500);
+  }, []);
+
   return (
     <>
       <div className={`SectionPartner mb-[175px] mb:mb-[50px]`}>
         <div className="cusContainer">
           <h2
             className={`
-          text-[92px] mb:text-[64px] text-center mb-[60px]
+          text-[92px] mb:text-[64px] text-center mb-[60px] fadeUp
           ${isHome ? "text-greenDark" : "text-green"}
           `}
           >

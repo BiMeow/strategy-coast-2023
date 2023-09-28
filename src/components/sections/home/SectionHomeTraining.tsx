@@ -1,5 +1,8 @@
+import gsap from "gsap";
 import { useRouter } from "next/router";
-import { memo } from "react";
+import { memo, useEffect } from "react";
+import { useWindowSize } from "usehooks-ts";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 let listTraining = [
   {
@@ -28,21 +31,123 @@ let listTraining = [
 function SectionHomeTraining({ ...props }) {
   const router = useRouter();
 
+  const { width } = useWindowSize();
+
+  useEffect(() => {
+    if (width > 992) {
+      setTimeout(() => {
+        gsap
+          .timeline({
+            scrollTrigger: {
+              trigger: ".listTraining",
+              start: "top 60%",
+            },
+          })
+          .fromTo(
+            ".itemTraining",
+            { x: -150, autoAlpha: 0 },
+            { x: 0, autoAlpha: 1, stagger: 0.5 }
+          );
+
+        gsap
+          .timeline({
+            scrollTrigger: {
+              trigger: ".itemTraining1",
+              start: "top center",
+              end: "bottom center",
+              scrub: 3,
+            },
+          })
+          .fromTo(".itemTraining1", { y: 0 }, { y: -40 });
+
+        gsap
+          .timeline({
+            scrollTrigger: {
+              trigger: ".itemTraining0",
+              start: "top center",
+              end: "bottom center",
+              scrub: 3,
+            },
+          })
+          .fromTo(".itemTraining0", { y: 0 }, { y: 40 });
+
+        gsap
+          .timeline({
+            scrollTrigger: {
+              trigger: ".itemTraining2",
+              start: "top center",
+              end: "bottom center",
+              scrub: 3,
+            },
+          })
+          .fromTo(".itemTraining2", { y: 0 }, { y: 40 });
+      }, 1500);
+    } else {
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: ".listTraining",
+            start: "top 60%",
+          },
+        })
+        .fromTo(
+          ".itemTraining",
+          { x: -150, autoAlpha: 0 },
+          { x: 0, autoAlpha: 1, stagger: 0.5 }
+        );
+
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: ".itemTraining1",
+            start: "top center",
+            end: "bottom center",
+            scrub: 3,
+          },
+        })
+        .fromTo(".itemTraining1", { y: 0 }, { y: 0 });
+
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: ".itemTraining0",
+            start: "top center",
+            end: "bottom center",
+            scrub: 3,
+          },
+        })
+        .fromTo(".itemTraining0", { y: 0 }, { y: 0 });
+
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: ".itemTraining2",
+            start: "top center",
+            end: "bottom center",
+            scrub: 3,
+          },
+        })
+        .fromTo(".itemTraining2", { y: 0 }, { y: 0 });
+    }
+
+    ScrollTrigger.refresh();
+  }, [width]);
+
   return (
     <>
       <div
         className={`SectionHomeTraining mb-[140px] tl-l:mb-[80px] tl-p:mb-[50px]`}
       >
         <div className="cusContainer">
-          <h3 className="text-[92px] text-greenDark text-center mb-[50px] tl-p:text-[64px] mb:text-[52px]">
+          <h3 className="text-[92px] text-greenDark text-center mb-[50px] tl-p:text-[64px] mb:text-[52px] fadeUp">
             Dịch vụ chính
           </h3>
 
-          <div className="flex flex-wrap mx-[-8px]">
+          <div className="listTraining flex flex-wrap mx-[-8px]">
             {listTraining.map((e: any, i: number) => (
               <div
                 className={`
-                itemTraining group relative w-1/3 px-[8px]
+                itemTraining itemTraining${i} group relative w-1/3 px-[8px]
                 tl-p:w-full tl-p:mb-[20px]
                 ${i == 1 ? "mt-[40px] tl-p:mt-0" : ""}
                 `}
@@ -78,6 +183,7 @@ function SectionHomeTraining({ ...props }) {
                     src={e.deco}
                     alt=""
                     className={`
+                        itemTrainingDeco${i}
                         absolute left-[20px] max-w-[146px]
                         tl-l:max-w-[100px] tl-p:max-w-[75px]
                         mb:hidden

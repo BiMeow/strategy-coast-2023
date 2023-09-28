@@ -1,6 +1,7 @@
 import { IconArrow } from "@/components/elements/Icon";
+import gsap from "gsap";
 import { useRouter } from "next/router";
-import { memo } from "react";
+import { memo, useEffect } from "react";
 
 let listFeature = [
   {
@@ -20,6 +21,34 @@ let listFeature = [
 function SectionBrandAbout({ ...props }) {
   const router = useRouter();
 
+  useEffect(() => {
+    setTimeout(() => {
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: ".brandAboutImage",
+            start: "top 25%",
+            end: "bottom top",
+            scrub: 3,
+          },
+        })
+        .fromTo(".brandAboutImage", { y: 0 }, { y: 100 });
+
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: ".listFeature",
+            start: "top 60%",
+          },
+        })
+        .fromTo(
+          ".itemFeature",
+          { scale: 0, autoAlpha: 0 },
+          { scale: 1, autoAlpha: 1, stagger: 0.5 }
+        );
+    }, 1500);
+  }, []);
+
   return (
     <>
       <div
@@ -27,15 +56,15 @@ function SectionBrandAbout({ ...props }) {
       >
         <div className="cusContainer text-green">
           <div className="heading text-center mb-[70px]">
-            <h2 className="text-[110px] mb-[20px] tl-l:text-[90px] mb:text-[48px]">
+            <h2 className="text-[110px] mb-[20px] tl-l:text-[90px] mb:text-[48px] fadeUp">
               RETHINK. REFLECT.
               <br />
               REIMAGINE YOUR BRAND.
             </h2>
-            <p className="text-[36px] mb-[30px] mb:text-[20px]">
+            <p className="text-[36px] mb-[30px] mb:text-[20px] fadeIn">
               Time to get your brand a retreat!
             </p>
-            <p className="text-[26px] mb: text-[16px]">
+            <p className="text-[26px] mb:text-[16px] fadeIn">
               Một chương trình huấn luyện tràn đầy cảm hứng, dành cho{" "}
               <br className="mb:hidden" /> cá nhân và doanh nghiệp cần được HỆ
               THỐNG HOÁ kiến <br className="mb:hidden" /> thức và KHAI MỞ TẦM
@@ -44,12 +73,12 @@ function SectionBrandAbout({ ...props }) {
           </div>
 
           <div className="content">
-            <div className="image relative rounded-[50px] mb:rounded-[30px] overflow-hidden">
+            <div className="image brandAboutImage relative rounded-[50px] mb:rounded-[30px] overflow-hidden">
               <div className="aspect-[1400/675] tl-p:aspect-[1400/775] mb:aspect-1"></div>
               <img src="/images/brand/about.jpg" alt="" className="absImg" />
             </div>
 
-            <p className="text-[36px] w-[40%] mt-[-165px] mb-[50px] relative z-10 tl-p:w-[75%] mb:w-full mb:mt-[-100px] mb:text-[26px]">
+            <p className="text-[36px] w-[40%] mt-[-165px] mb-[50px] relative z-10 tl-p:w-[75%] mb:w-full mb:mt-[-100px] mb:text-[26px] fadeUp">
               Brand Growth Retreat là một hành trình “đưa nhau đi trốn" để suy
               ngẫm về con đường tăng trưởng thương hiệu tại một khu vườn xanh
               giữa Thảo Điền, Q.2.

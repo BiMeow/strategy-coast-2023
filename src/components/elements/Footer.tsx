@@ -1,20 +1,41 @@
+import gsap, { Elastic } from "gsap";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { memo } from "react";
+import { memo, useEffect } from "react";
 
 function Footer({ isHome = true, ...props }) {
   const router = useRouter();
+
+  useEffect(() => {
+    setTimeout(() => {
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: ".RUR",
+            start: "top 75%",
+          },
+        })
+        .fromTo(
+          ".RUR",
+          { scale: 0, autoAlpha: 0 },
+          { scale: 1, autoAlpha: 1, ease: Elastic.easeOut }
+        );
+    }, 1500);
+  }, []);
 
   return (
     <>
       <div className={`Footer ${isHome ? "text-greenDark" : "text-green"}`}>
         <div className="cusContainer">
           <div className="getInTouch flex flex-col items-center justify-center mb-[220px] tl-l:mb-[75px]">
-            <h2 className="font-FirsNeueMedium text-[120px] text-center mb-[25px] tl-l:text-[100px] tl-p:text-[80px] mb:text-[38px]">
+            <h2 className="RUR font-FirsNeueMedium text-[120px] text-center mb-[25px] tl-l:text-[100px] tl-p:text-[80px] mb:text-[38px]">
               Bạn đã sẵn sàng?
             </h2>
             <button
-              className={`relative ${isHome ? "btnMain" : "btnMainGreen"}`}
+              className={`
+              relative fadeUp
+               ${isHome ? "btnMain" : "btnMainGreen"}
+              `}
             >
               Đăng ký ghi danh
               <Link
