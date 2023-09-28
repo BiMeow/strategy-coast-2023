@@ -97,7 +97,7 @@ const MainProvider: React.FC<Props> = ({ children, isPrivate }) => {
         );
     });
 
-    console.log(`BiMeow initanimation`);
+    let listHeading = gsap.utils.toArray(".headingAnimation");
 
     ScrollTrigger.refresh();
   };
