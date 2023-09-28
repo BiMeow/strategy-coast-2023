@@ -18,8 +18,6 @@ interface Props {
 const MainProvider: React.FC<Props> = ({ children, isPrivate }) => {
   const { setIsLoading } = useStorage();
 
-  const [init, setInit] = useState<boolean>(false);
-
   const initAnimation = () => {
     let listFadeIn = gsap.utils.toArray(".fadeIn");
     listFadeIn.forEach((l: any) => {
@@ -97,25 +95,15 @@ const MainProvider: React.FC<Props> = ({ children, isPrivate }) => {
         );
     });
 
-    let listHeading = gsap.utils.toArray(".headingAnimation");
-
     ScrollTrigger.refresh();
   };
 
   useEffect(() => {
     setTimeout(() => {
-      setInit(true);
+      initAnimation();
       setIsLoading(false);
     }, 1500);
   }, []);
-
-  useEffect(() => {
-    if (init) {
-      setTimeout(() => {
-        initAnimation();
-      }, 400);
-    }
-  }, [init]);
 
   return <MainContext.Provider value={{}}>{children}</MainContext.Provider>;
 };

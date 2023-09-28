@@ -266,7 +266,7 @@ function SectionBrandCourse({ ...props }) {
                     <p className="text-[24px] font-FirsNeueMedium">
                       Early Bird
                     </p>
-                    <p>(trước ngày 5/10/2023)</p>
+                    <p>(trước ngày 9/10/2023)</p>
                   </div>
                   <p className="text-[28px] font-FirsNeueBold">11,500,000đ</p>
                 </div>
@@ -276,7 +276,7 @@ function SectionBrandCourse({ ...props }) {
                 <div className="">
                   <div className="mb-[10px]">
                     <p className="text-[24px] font-FirsNeueMedium">Regular</p>
-                    <p>(sau ngày 5/10/2023)</p>
+                    <p>(sau ngày 9/10/2023)</p>
                   </div>
                   <p className="text-[28px] font-FirsNeueBold">13,000,000đ</p>
                 </div>
