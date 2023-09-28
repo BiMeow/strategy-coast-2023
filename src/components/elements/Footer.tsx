@@ -13,8 +13,17 @@ function Footer({ isHome = true, ...props }) {
             <h2 className="font-FirsNeueMedium text-[120px] text-center mb-[25px] tl-l:text-[100px] tl-p:text-[80px] mb:text-[38px]">
               Bạn đã sẵn sàng?
             </h2>
-            <button className={`${isHome ? "btnMain" : "btnMainGreen"}`}>
+            <button
+              className={`relative ${isHome ? "btnMain" : "btnMainGreen"}`}
+            >
               Đăng ký ghi danh
+              <Link
+                href={
+                  "https://docs.google.com/forms/d/1MfVRukCNszqmLORi_UVKajdS6KNKXQW5nXa4b3eEBZs/formrestricted"
+                }
+                target="_blank"
+                className="absImg"
+              ></Link>
             </button>
           </div>
 
@@ -58,8 +67,26 @@ function Footer({ isHome = true, ...props }) {
               </div>
               <div className="font-FirsNeueMedium text-right mb:w-full mb:text-center">
                 <p>
-                  <Link href="/#">facebook</Link> / <Link href="/#">instagram</Link> /
-                  <Link href="/#">linkedin</Link>
+                  <Link
+                    href="https://www.facebook.com/strategycoast"
+                    target="_blank"
+                  >
+                    facebook
+                  </Link>{" "}
+                  /{" "}
+                  <Link
+                    href="https://www.instagram.com/hellostrategycoast/"
+                    target="_blank"
+                  >
+                    instagram
+                  </Link>{" "}
+                  /
+                  <Link
+                    href="https://www.linkedin.com/company/strategycoast/"
+                    target="_blank"
+                  >
+                    linkedin
+                  </Link>
                 </p>
               </div>
             </div>
