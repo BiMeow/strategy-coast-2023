@@ -1,6 +1,7 @@
 import Providers from "@/components/context/compose/Providers";
 import Footer from "@/components/elements/Footer";
 import Header from "@/components/elements/Header";
+import Loading from "@/components/elements/Loading";
 import Head from "next/head";
 import { useRouter } from "next/router";
 
@@ -34,6 +35,7 @@ function MasterPage({
           ${isHome ? "bg-green" : "bg-greenDark"}
           `}
         >
+          <Loading />
           <Header isHome={isHome} activeNav={activeNav} />
           <div className={`pageContent`}>{children}</div>
           <Footer isHome={isHome} />

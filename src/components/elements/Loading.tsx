@@ -12,7 +12,7 @@ const Loading = () => {
         `}
       >
         <div className="overlay absolute left-0 top-0 h-full w-full //bg-[#0007] bg-greenDark backdrop-blur-[40px]"></div>
-        <div className="logo relative w-[200px] rounded-full overflow-hidden bg-greenDark">
+        <div className="relative w-[200px] rounded-full overflow-hidden bg-greenDark">
           <div className="aspect-1"></div>
           <img
             src="/images/loader.png"
@@ -22,10 +22,6 @@ const Loading = () => {
         </div>
       </div>
       <style jsx>{`
-        .logo {
-          //animation: opacity 1s linear 0s infinite alternate;
-        }
-
         .move {
           animation: marquee 5s linear infinite;
         }

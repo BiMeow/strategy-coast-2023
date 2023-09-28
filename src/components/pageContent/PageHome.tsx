@@ -1,3 +1,4 @@
+import SectionPartner from "@/components/sections/common/SectionPartner";
 import SectionHomeAbout from "@/components/sections/home/SectionHomeAbout";
 import SectionHomeBanner from "@/components/sections/home/SectionHomeBanner";
 import SectionHomeTraining from "@/components/sections/home/SectionHomeTraining";
@@ -13,6 +14,7 @@ function PageHome({ ...props }) {
         <SectionHomeBanner />
         <SectionHomeAbout />
         <SectionHomeTraining />
+        <SectionPartner />
       </div>
     </>
   );

@@ -62,7 +62,7 @@ function SectionBrandMoreInfo({ ...props }) {
                 <img src="/images/home/about-1.jpg" alt="" className="absImg" />
 
                 <div className="relative content py-[30px] px-[30px] text-white">
-                  <p className="text-[18px] uppercase tracking-[3px] mb-[15px] text-white mb:text-[16px]">
+                  <p className="text-[18px] uppercase tracking-[3px] mb-[15px] text-white mb:text-[14px]">
                     Phương pháp huấn luyện.
                   </p>
 

@@ -18,11 +18,11 @@ function Header({ activeNav = 2, ...props }: any) {
   //   let curY = window.scrollY;
 
   //   if (curY < 50) {
-  //     setIsTopPage(true);
-  //     setShowHeader(true);
+  //     //setIsTopPage(true);
+  //     //setShowHeader(true);
   //   } else {
-  //     setIsTopPage(false);
-  //     setShowHeader(false);
+  //     //setIsTopPage(false);
+  //     //setShowHeader(false);
   //   }
 
   //   if (prevY < curY) setShowHeader(false);

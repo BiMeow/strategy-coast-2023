@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useRouter } from "next/router";
 import { memo } from "react";
 
@@ -57,8 +58,8 @@ function Footer({ isHome = true, ...props }) {
               </div>
               <div className="font-FirsNeueMedium text-right mb:w-full mb:text-center">
                 <p>
-                  <a href="#">facebook</a> / <a href="#">instagram</a> /
-                  <a href="#">linkedin</a>
+                  <Link href="/#">facebook</Link> / <Link href="/#">instagram</Link> /
+                  <Link href="/#">linkedin</Link>
                 </p>
               </div>
             </div>

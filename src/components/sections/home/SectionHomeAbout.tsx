@@ -20,12 +20,12 @@ function SectionHomeAbout({ ...props }) {
 
         <div className="cusContainer relative flex flex-wrap items-center -mx-[10px] mb:mx-0">
           <div className="c1 w-[42%] px-[10px] mb:px-0 relative z-10 tl-l:w-full tl-l:mb-[16px]">
-            <div className="story pl-[55px] pr-[80px] pt-[60px] pb-[150px] bg-greenDark rounded-[50px] mb:rounded-[30px] mb-[16px] mb:px-[30px]">
+            <div className="story pl-[55px] pr-[80px] pt-[60px] pb-[150px] bg-greenDark rounded-[50px] mb:rounded-[30px] mb-[16px] mb:p-[30px]">
               <h3 className="text-[64px] text-green mb-[35px] mb:text-[42px]">
                 Câu chuyện <br className="hidden mb:block" /> của chúng tôi
               </h3>
 
-              <p className="text-white text-[18px]   mb:text-[16px]">
+              <p className="text-white text-[18px] mb:text-[16px]">
                 Sau nhiều năm làm công việc tiếp thị, hoạch định và sáng tạo tại
                 các tập đoàn lớn, chúng tôi nhận thấy rằng cách hiệu quả nhất để
                 có được những ý tưởng xuất phát từ sự thấu hiểu chính mình và
@@ -78,7 +78,7 @@ function SectionHomeAbout({ ...props }) {
               </div>
             </div>
 
-            <div className="course group relative px-[50px] pt-[75px] pb-[150px] bg-[#12DE00] rounded-[50px] mb:rounded-[30px] duration-500 mb:px-[30px] hover:bg-greenDark">
+            <div className="course group relative px-[50px] pt-[75px] pb-[150px] bg-[#12DE00] rounded-[50px] mb:rounded-[30px] duration-500 mb:px-[30px] hover:bg-greenDark mb:p-[30px]">
               <h4 className="uppercase text-[18px] tracking-[2px] mb-[30px] duration-300 group-hover:text-green">
                 KHÓA ĐẶC BIỆT
               </h4>
@@ -87,11 +87,11 @@ function SectionHomeAbout({ ...props }) {
                 Brand Growth Retreat®
               </h3>
 
-              <p className="text-[32px] duration-300 group-hover:text-green">
+              <p className="text-[32px] duration-300 group-hover:text-green mb:mb-[30px]">
                 Chương trình huấn luyện Tăng trưởng thương hiệu
               </p>
 
-              <div className="icon absolute bottom-[50px] right-[50px] duration-300 group-hover:translate-x-[5px] group-hover:fill-green">
+              <div className="icon absolute bottom-[50px] right-[50px] duration-300 group-hover:translate-x-[5px] group-hover:fill-green mb:relative mb:top-0 mb:left-0 mb:flex mb:justify-end">
                 <IconArrow />
               </div>
 

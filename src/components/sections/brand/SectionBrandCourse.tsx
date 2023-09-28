@@ -17,7 +17,9 @@ function SectionBrandCourse({ ...props }) {
           <div className="px-[40px] py-[60px] mb:p-[30px] border-4 border-green rounded-[50px] mb:rounded-[30px] mb-[15px]">
             <div className="flex flex-wrap mx-[-30px] text-green">
               <div className="c1 w-[40%] mb:w-full mb-[20px] px-[30px]">
-                <p className="text-[38px] mb:text-[28px]">+ Nền tảng</p>
+                <p className="text-[38px] tl-l:text-[32px] mb:text-[28px]">
+                  + Nền tảng
+                </p>
               </div>
 
               <div className="c2 w-[30%] mb:w-full px-[30px]">
@@ -56,7 +58,7 @@ function SectionBrandCourse({ ...props }) {
           <div className="px-[40px] py-[60px] mb:p-[30px] border-4 border-green rounded-[50px] mb:rounded-[30px] mb-[15px]">
             <div className="flex flex-wrap mx-[-30px] text-green">
               <div className="c1 w-[40%] mb:w-full mb-[20px] px-[30px]">
-                <p className="text-[38px] mb:text-[28px]">
+                <p className="text-[38px] tl-l:text-[32px] mb:text-[28px]">
                   + Chiến lược tăng trưởng
                 </p>
               </div>
@@ -172,7 +174,7 @@ function SectionBrandCourse({ ...props }) {
           <div className="px-[40px] py-[60px] mb:p-[30px] border-4 border-green rounded-[50px] mb:rounded-[30px] mb-[15px]">
             <div className="flex flex-wrap mx-[-30px] text-green">
               <div className="c1 w-[40%] mb:w-full mb-[20px] px-[30px]">
-                <p className="text-[38px] mb:text-[28px]">
+                <p className="text-[38px] tl-l:text-[32px] mb:text-[28px]">
                   + Chiến thuật tăng trưởng
                 </p>
               </div>
@@ -212,7 +214,9 @@ function SectionBrandCourse({ ...props }) {
           <div className="px-[40px] py-[60px] mb:p-[30px] border-4 border-green rounded-[50px] mb:rounded-[30px] mb-[15px]">
             <div className="flex flex-wrap mx-[-30px] text-green">
               <div className="c1 w-[40%] mb:w-full mb-[20px] px-[30px]">
-                <p className="text-[38px] mb:text-[28px]">+ Phản tư</p>
+                <p className="text-[38px] tl-l:text-[32px] mb:text-[28px]">
+                  + Phản tư
+                </p>
               </div>
 
               <div className="c2 w-[30%] mb:w-full px-[30px]">
@@ -250,7 +254,9 @@ function SectionBrandCourse({ ...props }) {
           <div className="px-[40px] py-[60px] mb:p-[30px] bg-green border-4 border-green rounded-[50px] mb:rounded-[30px] mb-[15px]">
             <div className="flex flex-wrap mx-[-30px] text-greenDark">
               <div className="c1 w-[40%] mb:w-full mb-[20px] px-[30px]">
-                <p className="text-[38px] mb:text-[28px]">Chi phí khóa học:</p>
+                <p className="text-[38px] tl-l:text-[32px] mb:text-[28px]">
+                  Chi phí khóa học:
+                </p>
                 <p>(Chưa bao gồm VAT)</p>
               </div>
 
@@ -262,17 +268,28 @@ function SectionBrandCourse({ ...props }) {
                     </p>
                     <p>(trước ngày 5/10/2023)</p>
                   </div>
-                  <p className="text-[28px] font-FirsNeueBold">10,000,000đ</p>
+                  <p className="text-[28px] font-FirsNeueBold">11,500,000đ</p>
                 </div>
               </div>
 
-              <div className="c3 w-[30%] mb:w-full px-[30px]">
+              <div className="c3 w-[30%] mb-[25px] mb:w-full px-[30px]">
                 <div className="">
                   <div className="mb-[10px]">
                     <p className="text-[24px] font-FirsNeueMedium">Regular</p>
                     <p>(sau ngày 5/10/2023)</p>
                   </div>
-                  <p className="text-[28px] font-FirsNeueBold">11,000,000đ</p>
+                  <p className="text-[28px] font-FirsNeueBold">13,000,000đ</p>
+                </div>
+              </div>
+
+              <div className="c4 w-[60%] ml-auto mb:w-full px-[30px]">
+                <div className="">
+                  <div className="mb-[10px]">
+                    <p className="text-[24px] font-FirsNeueMedium mb-[10px]">
+                      Đăng ký theo nhóm:
+                    </p>
+                    <p className="text-[17px] font-FirsNeueMedium mb:text-[16px]">{`Nhóm 2 người: -5%, Nhóm 3 người: -10%, Nhóm >4 người: -15%`}</p>
+                  </div>
                 </div>
               </div>
             </div>
