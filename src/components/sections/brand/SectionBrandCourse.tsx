@@ -72,7 +72,7 @@ function SectionBrandCourse({ ...props }) {
                   </div>
                   <div className="w-[calc(100%-45px)] pl-[20px] pt-[15px] mb:pt-0 mb-[20px]">
                     <p className="font-FirsNeueMedium text-[24px] mb:text-[20px] mb-[10px]">
-                      Isegmentation, Targeting & Needstate
+                      Segmentation, Targeting & Needstate
                     </p>
                     <p className="text-[18px] mb:text-[16px] text-white">
                       Chọn Phân khúc, hiểu Nhu cầu
