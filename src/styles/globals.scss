@@ -46,7 +46,7 @@
 
 html,
 body {
-  scroll-behavior: smooth !important;
+  //scroll-behavior: smooth !important;
 }
 
 body {
@@ -65,14 +65,6 @@ body {
 
 p {
   line-height: 1.2;
-}
-
-.fadeUp,
-.fadeDown,
-.fadeRight,
-.fadeLeft,
-.fadeIn {
-  opacity: 0;
 }
 
 @media screen and (max-width: 767px) {

@@ -1,7 +1,6 @@
-import React, { FC, useContext, useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 import { useStorage } from "@/components/context/StorageProvider";
-import Loading from "@/components/elements/Loading";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
@@ -18,6 +17,8 @@ interface Props {
 
 const MainProvider: React.FC<Props> = ({ children, isPrivate }) => {
   const { setIsLoading } = useStorage();
+
+  const [init, setInit] = useState<boolean>(false);
 
   const initAnimation = () => {
     let listFadeIn = gsap.utils.toArray(".fadeIn");
@@ -95,21 +96,28 @@ const MainProvider: React.FC<Props> = ({ children, isPrivate }) => {
           { x: 0, autoAlpha: 1, opacity: 1 }
         );
     });
+
+    console.log(`BiMeow initanimation`);
+
+    ScrollTrigger.refresh();
   };
 
   useEffect(() => {
     setTimeout(() => {
-      initAnimation();
+      setInit(true);
       setIsLoading(false);
     }, 1500);
   }, []);
 
-  return (
-    <MainContext.Provider value={{}}>
-      <Loading />
-      {children}
-    </MainContext.Provider>
-  );
+  useEffect(() => {
+    if (init) {
+      setTimeout(() => {
+        initAnimation();
+      }, 400);
+    }
+  }, [init]);
+
+  return <MainContext.Provider value={{}}>{children}</MainContext.Provider>;
 };
 
 export default MainProvider;
