@@ -12,17 +12,17 @@ function SectionBrandBanner({ ...props }) {
           <div className="relative rounded-[50px] mb:rounded-[30px] overflow-hidden w-full h-[calc(100vh-40px)] mb:h-[calc(100vh-20px)]">
             <img src="/images/brand/banner.jpg" alt="" className="absImg" />
 
-            <div className="content w-full max-w-[950px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+            <div className="content w-full max-w-[950px] pt-[30px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
               <p className="uppercase text-[32px] leading-[1] mb-[10px] text-white text-center mb:text-[18px]">
                 Chương trình huấn luyện
               </p>
               <h1 className="text-[64px] text-white text-center leading-[1] mb-[10px] mb:text-[50px]">
                 Brand Growth Retreat®
               </h1>
-              <p className="text-[32px] text-white text-center leading-[1] mb-[30px] mb:text-[22px]">
+              <p className="text-[32px] text-white text-center leading-[1] mb-[50px] mb:text-[22px]">
                 Tăng trưởng thương hiệu
               </p>
-              <div className="flex justify-center">
+              <div className="flex justify-center mb-[75px]">
                 <button className="relative btnMainGreen">
                   Đăng ký ghi danh
                   <Link
@@ -34,6 +34,14 @@ function SectionBrandBanner({ ...props }) {
                   ></Link>
                 </button>
               </div>
+              <p className="text-white text-center text-[20px] mb:text-[16px]">
+                Thời lượng: 3 ngày Thứ Bảy (6 buổi)
+                <br />
+                Ngày học:{" "}
+                <span className="font-FirsNeueMedium">14/10, 21/10, 28/10</span>
+                <br />
+                Địa điểm: 28 Thảo Điền, Quận 2, TP. HCM
+              </p>
             </div>
           </div>
         </div>
