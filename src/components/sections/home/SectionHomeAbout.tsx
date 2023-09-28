@@ -39,8 +39,8 @@ function SectionHomeAbout({ ...props }) {
                 hiệu quả.
                 <br />
                 <br />
-                StrategyCoast® ra đời với tầm nhìn trở thành một nơi chốn của sự
-                khai mở, cảm hứng và sáng tạo hiệu quả.
+                StrategyCoast® ra đời với tầm nhìn trở thành nơi tạo ra sự khai
+                mở, cảm hứng và sáng tạo hiệu quả.
               </p>
             </div>
 

@@ -2,9 +2,12 @@ import React from "react";
 import { useEffect, useState, useContext, useRef, memo, useMemo } from "react";
 import { useRouter } from "next/router";
 import { useStorage } from "@/components/context/StorageProvider";
+import { useWindowSize } from "usehooks-ts";
 
 function Loading({ ...props }) {
   const router = useRouter();
+
+  const { width } = useWindowSize();
 
   const { isLoading } = useStorage();
 
@@ -18,48 +21,22 @@ function Loading({ ...props }) {
           `}
         >
           <div className="overlay absolute left-0 top-0 h-full w-full //bg-[#0007] bg-greenDark backdrop-blur-[40px]"></div>
-          <div className="relative w-[200px] rounded-full overflow-hidden bg-greenDark">
-            <div className="aspect-1"></div>
-            <img
-              src="/images/loader.png"
-              alt=""
-              className="move absolute w-[500px] h-full max-w-none top-0 left-0"
-            />
-          </div>
+          {width > 767 ? (
+            <div className="relative w-[200px] rounded-full overflow-hidden bg-greenDark">
+              <div className="aspect-1"></div>
+              <img
+                src="/images/loader.png"
+                alt=""
+                className="move absolute w-[500px] h-full max-w-none top-0 left-0"
+              />
+            </div>
+          ) : (
+            <div className="move w-[200px]">
+              <img src="/images/Logo.png" alt="" className="w-full" />
+            </div>
+          )}
         </div>
       </div>
-
-      <style jsx global>{`
-        .Loading {
-          .move {
-            animation: marquee 5s linear infinite;
-          }
-
-          @media screen and (max-width: 767px) {
-            .move {
-              opacity: opacity 5s linear infinite;
-            }
-          }
-        }
-
-        @keyframes opacity {
-          0% {
-            opacity: 0;
-          }
-          100% {
-            opacity: 1;
-          }
-        }
-
-        @keyframes marquee {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-300px);
-          }
-        }
-      `}</style>
     </>
   );
 }

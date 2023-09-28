@@ -5,15 +5,15 @@ import { memo } from "react";
 let listFeature = [
   {
     title:
-      "HỆ THỐNG HOÁ kiến thức, giữa biển thông tin và các \ntư vấn trái ngược nhau ",
+      "HỆ THỐNG HOÁ kiến thức, giữa biển thông tin và các \ntư vấn trái ngược nhau.",
   },
   {
     title:
-      "Học cách tư duy chiến lược bài bản, khi ta hay bị xao nhãng bởi các vấn đề vận hành và trào lưu ngắn hạn",
+      "Học cách tư duy chiến lược bài bản, khi ta hay bị xao nhãng bởi các vấn đề vận hành và trào lưu ngắn hạn.",
   },
   {
     title:
-      "TÌM KIẾM CẢM HỨNG sáng tạo cho thương hiệu, khi tầm nhìn bị bó hẹp vì quá gần, quá quen với thương hiệu và ngành hàng của mình",
+      "TÌM KIẾM CẢM HỨNG sáng tạo cho thương hiệu, khi tầm nhìn bị bó hẹp vì quá gần, quá quen với thương hiệu và ngành hàng của mình.",
   },
 ];
 

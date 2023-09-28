@@ -2,6 +2,7 @@ import Providers from "@/components/context/compose/Providers";
 import Footer from "@/components/elements/Footer";
 import Header from "@/components/elements/Header";
 import Loading from "@/components/elements/Loading";
+import Preloader from "@/components/elements/Preloader";
 import Head from "next/head";
 import { useRouter } from "next/router";
 

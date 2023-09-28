@@ -5,7 +5,7 @@ let listTraining = [
   {
     title: "Huấn luyện \ncá nhân",
     description:
-      "Các khóa huấn luyện được thế kế đế giúp bạn thay đổi tư duy, khơi mở tầm nhìn và tìm thấy được những chiến lược, ý tưởng phù hợp cho thương hiệu, đoàng nghiệp của mình.",
+      "Các khóa huấn luyện được thế kế đế giúp bạn thay đổi tư duy, khơi mở tầm nhìn và tìm thấy được những chiến lược, ý tưởng phù hợp cho thương hiệu và doanh nghiệp của bạn.",
     image: "/images/home/training-1.jpg",
     deco: "/images/home/deco-training-1.svg",
   },
@@ -19,7 +19,7 @@ let listTraining = [
   {
     title: "Huấn luyện \ntheo yêu cầu",
     description:
-      "Tuỳ vào đặc điểm, thách thức và mục tiêu mà doanh nghiệp đang có, từ việc tái định vị thương hiệu, phát triển sản phẩm hay phát triển ý tưởng truyền thông, chúng tôi để có thể thiết kế giải pháp huấn luyện phù hợp cho bạn.",
+      "Tuỳ vào đặc điểm, thách thức và mục tiêu mà doanh nghiệp đang có, từ việc tái định vị thương hiệu, phát triển sản phẩm hay phát triển ý tưởng truyền thông, chúng tôi đều có thể thiết kế các giải pháp huấn luyện phù hợp cho bạn.",
     image: "/images/home/training-3.jpg",
     deco: "/images/home/deco-training-3.svg",
   },
