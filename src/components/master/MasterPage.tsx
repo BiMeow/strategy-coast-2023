@@ -42,7 +42,7 @@ function MasterPage({
         <meta property="og:description" content={description} />
         <meta
           property="og:image"
-          content={`https://www.strategycoast.vn/images/home/banner.jpg`}
+          content={`https://google-cdn.digitop.vn/strategycoast/banner.jpg?fbclid=IwAR1VfBaKysv8MHY_JizgSgOK4d2HYU5qdDdTw-I02rn7jPz5qeMAqnt3bsU`}
         />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
