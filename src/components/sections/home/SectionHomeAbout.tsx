@@ -105,24 +105,26 @@ function SectionHomeAbout({ ...props }) {
               </div>
             </div>
 
-            <div className="course group relative px-[50px] pt-[75px] pb-[150px] bg-[#12DE00] rounded-[50px] mb:rounded-[30px] duration-500 mb:px-[30px] hover:bg-greenDark mb:p-[30px] fadeLeft">
-              <h4 className="uppercase text-[18px] tracking-[2px] mb-[30px] duration-300 group-hover:text-green">
-                KHÓA ĐẶC BIỆT
-              </h4>
+            <div className="course fadeLeft">
+              <div className="group relative px-[50px] pt-[75px] pb-[150px] bg-[#12DE00] rounded-[50px] mb:rounded-[30px] duration-500 mb:px-[30px] hover:bg-greenDark mb:p-[30px]">
+                <h4 className="uppercase text-[18px] tracking-[2px] mb-[30px] duration-300 group-hover:text-green">
+                  KHÓA ĐẶC BIỆT
+                </h4>
 
-              <h3 className="text-[64px] text-greenDark mb-[25px] mb:text-[42px] duration-300 group-hover:text-green">
-                Brand Growth Retreat®
-              </h3>
+                <h3 className="text-[64px] text-greenDark mb-[25px] mb:text-[42px] duration-300 group-hover:text-green">
+                  Brand Growth Retreat®
+                </h3>
 
-              <p className="text-[32px] duration-300 group-hover:text-green mb:mb-[30px]">
-                Chương trình huấn luyện Tăng trưởng thương hiệu
-              </p>
+                <p className="text-[32px] duration-300 group-hover:text-green mb:mb-[30px]">
+                  Chương trình huấn luyện Tăng trưởng thương hiệu
+                </p>
 
-              <div className="icon absolute bottom-[50px] right-[50px] duration-300 group-hover:translate-x-[5px] group-hover:fill-green mb:relative mb:top-0 mb:left-0 mb:flex mb:justify-end">
-                <IconArrow />
+                <div className="icon absolute bottom-[50px] right-[50px] duration-300 group-hover:translate-x-[5px] group-hover:fill-green mb:relative mb:top-0 mb:left-0 mb:flex mb:justify-end">
+                  <IconArrow />
+                </div>
+
+                <Link href={"/BrandGrowthRetreat"} className="absImg"></Link>
               </div>
-
-              <Link href={"/BrandGrowthRetreat"} className="absImg"></Link>
             </div>
           </div>
 

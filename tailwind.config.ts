@@ -10,6 +10,7 @@ const config: Config = {
     extend: {
       screens: {
         "dt-exl": { min: "1779px" },
+        "dt-l-min": { min: "1366px" },
         "dt-xl": { max: "1660px" },
         "dt-l": { max: "1440px" },
         "tl-l": { max: "1366px" },

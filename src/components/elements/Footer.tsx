@@ -31,21 +31,23 @@ function Footer({ isHome = true, ...props }) {
             <h2 className="RUR font-FirsNeueMedium text-[120px] text-center mb-[25px] tl-l:text-[100px] tl-p:text-[80px] mb:text-[38px]">
               Bạn đã sẵn sàng?
             </h2>
-            <button
-              className={`
-              relative fadeUp
+            <div className="fadeUp">
+              <button
+                className={`
+              relative
                ${isHome ? "btnMain" : "btnMainGreen"}
               `}
-            >
-              Đăng ký ghi danh
-              <Link
-                href={
-                  "https://docs.google.com/forms/d/1MfVRukCNszqmLORi_UVKajdS6KNKXQW5nXa4b3eEBZs/formrestricted"
-                }
-                target="_blank"
-                className="absImg"
-              ></Link>
-            </button>
+              >
+                Đăng ký ghi danh
+                <Link
+                  href={
+                    "https://docs.google.com/forms/d/1MfVRukCNszqmLORi_UVKajdS6KNKXQW5nXa4b3eEBZs/formrestricted"
+                  }
+                  target="_blank"
+                  className="absImg"
+                ></Link>
+              </button>
+            </div>
           </div>
 
           <div className="contactInfo mb-[30px] mb:mb-[20px]">
