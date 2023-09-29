@@ -34,13 +34,32 @@ function MasterPage({
       <Head>
         <title>{title}</title>
 
+        <meta charSet="UTF-8" key="charset" />
+
         <link rel="shortcut icon" href={`/images/fav-icon.svg`} />
 
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
-        <meta property="og:image" content={`/images/logo.png`} />
+        <meta
+          property="og:image"
+          content={`https://www.strategycoast.vn/images/home/banner.jpg`}
+        />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta
+          name="apple-mobile-web-app-status-bar-style"
+          content="black-translucent"
+        />
+
+        <meta
+          name="viewport"
+          key="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+        />
       </Head>
-      
+
       <Providers>
         <main
           className={`

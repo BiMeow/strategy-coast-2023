@@ -1,50 +1,99 @@
 import gsap, { Power4 } from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { memo, useEffect } from "react";
+import { useWindowSize } from "usehooks-ts";
 
 function SectionBrandBanner({ ...props }) {
   const router = useRouter();
 
-  useEffect(() => {
-    setTimeout(() => {
-      gsap
-        .timeline({
-          scrollTrigger: {
-            trigger: ".SectionBrandBanner",
-            start: "top center",
-            end: "bottom center",
-            scrub: 3,
-          },
-        })
-        .fromTo(".bannerImage", { y: 0 }, { y: -150 });
+  const { width } = useWindowSize();
 
-      gsap
-        .timeline({
-          scrollTrigger: {
-            trigger: ".SectionBrandBanner",
-            start: "top bottom",
-          },
-        })
-        .fromTo(
-          ".bannerTitle",
-          { scale: 0, autoAlpha: 0 },
-          { scale: 1, autoAlpha: 1, ease: Power4.easeOut },
-          0.5
-        )
-        .fromTo(
-          ".bannerButton",
-          { y: 150, autoAlpha: 0 },
-          { y: 0, autoAlpha: 1, ease: Power4.easeOut },
-          1
-        )
-        .fromTo(
-          ".bannerDes",
-          { y: 150, autoAlpha: 0 },
-          { y: 0, autoAlpha: 1, ease: Power4.easeOut },
-          1.5
-        );
-    }, 1500);
+  useEffect(() => {
+    if (width) {
+      if (width > 1280) {
+        setTimeout(() => {
+          gsap
+            .timeline({
+              scrollTrigger: {
+                trigger: ".SectionBrandBanner",
+                start: "top center",
+                end: "bottom center",
+                scrub: 3,
+              },
+            })
+            .fromTo(".bannerImage", { y: 0 }, { y: -150 });
+
+          gsap
+            .timeline({
+              scrollTrigger: {
+                trigger: ".SectionBrandBanner",
+                start: "top bottom",
+              },
+            })
+            .fromTo(
+              ".bannerTitle",
+              { scale: 0, autoAlpha: 0 },
+              { scale: 1, autoAlpha: 1, ease: Power4.easeOut },
+              0.5
+            )
+            .fromTo(
+              ".bannerButton",
+              { y: 150, autoAlpha: 0 },
+              { y: 0, autoAlpha: 1, ease: Power4.easeOut },
+              1
+            )
+            .fromTo(
+              ".bannerDes",
+              { y: 150, autoAlpha: 0 },
+              { y: 0, autoAlpha: 1, ease: Power4.easeOut },
+              1.5
+            );
+        }, 1500);
+      } else {
+        setTimeout(() => {
+          gsap
+            .timeline({
+              scrollTrigger: {
+                trigger: ".SectionBrandBanner",
+                start: "top center",
+                end: "bottom center",
+                scrub: 3,
+              },
+            })
+            .fromTo(".bannerImage", {}, {});
+
+          gsap
+            .timeline({
+              scrollTrigger: {
+                trigger: ".SectionBrandBanner",
+                start: "top bottom",
+              },
+            })
+            .fromTo(
+              ".bannerTitle",
+              { scale: 0, autoAlpha: 0 },
+              { scale: 1, autoAlpha: 1, ease: Power4.easeOut },
+              0.5
+            )
+            .fromTo(
+              ".bannerButton",
+              { y: 150, autoAlpha: 0 },
+              { y: 0, autoAlpha: 1, ease: Power4.easeOut },
+              1
+            )
+            .fromTo(
+              ".bannerDes",
+              { y: 150, autoAlpha: 0 },
+              { y: 0, autoAlpha: 1, ease: Power4.easeOut },
+              1.5
+            );
+        }, 1500);
+      }
+    }
+
+    ScrollTrigger.refresh();
   }, []);
 
   return (

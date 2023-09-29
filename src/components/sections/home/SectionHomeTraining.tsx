@@ -34,8 +34,56 @@ function SectionHomeTraining({ ...props }) {
   const { width } = useWindowSize();
 
   useEffect(() => {
-    if (width > 992) {
-      setTimeout(() => {
+    if (width) {
+      if (width > 992) {
+        setTimeout(() => {
+          gsap
+            .timeline({
+              scrollTrigger: {
+                trigger: ".listTraining",
+                start: "top 60%",
+              },
+            })
+            .fromTo(
+              ".itemTraining",
+              { x: -150, autoAlpha: 0 },
+              { x: 0, autoAlpha: 1, stagger: 0.5 }
+            );
+
+          gsap
+            .timeline({
+              scrollTrigger: {
+                trigger: ".itemTraining1",
+                start: "top center",
+                end: "bottom center",
+                scrub: 3,
+              },
+            })
+            .fromTo(".itemTraining1", { y: 0 }, { y: -40 });
+
+          gsap
+            .timeline({
+              scrollTrigger: {
+                trigger: ".itemTraining0",
+                start: "top center",
+                end: "bottom center",
+                scrub: 3,
+              },
+            })
+            .fromTo(".itemTraining0", { y: 0 }, { y: 40 });
+
+          gsap
+            .timeline({
+              scrollTrigger: {
+                trigger: ".itemTraining2",
+                start: "top center",
+                end: "bottom center",
+                scrub: 3,
+              },
+            })
+            .fromTo(".itemTraining2", { y: 0 }, { y: 40 });
+        }, 1500);
+      } else {
         gsap
           .timeline({
             scrollTrigger: {
@@ -58,7 +106,7 @@ function SectionHomeTraining({ ...props }) {
               scrub: 3,
             },
           })
-          .fromTo(".itemTraining1", { y: 0 }, { y: -40 });
+          .fromTo(".itemTraining1", { y: 0 }, { y: 0 });
 
         gsap
           .timeline({
@@ -69,7 +117,7 @@ function SectionHomeTraining({ ...props }) {
               scrub: 3,
             },
           })
-          .fromTo(".itemTraining0", { y: 0 }, { y: 40 });
+          .fromTo(".itemTraining0", { y: 0 }, { y: 0 });
 
         gsap
           .timeline({
@@ -80,54 +128,8 @@ function SectionHomeTraining({ ...props }) {
               scrub: 3,
             },
           })
-          .fromTo(".itemTraining2", { y: 0 }, { y: 40 });
-      }, 1500);
-    } else {
-      gsap
-        .timeline({
-          scrollTrigger: {
-            trigger: ".listTraining",
-            start: "top 60%",
-          },
-        })
-        .fromTo(
-          ".itemTraining",
-          { x: -150, autoAlpha: 0 },
-          { x: 0, autoAlpha: 1, stagger: 0.5 }
-        );
-
-      gsap
-        .timeline({
-          scrollTrigger: {
-            trigger: ".itemTraining1",
-            start: "top center",
-            end: "bottom center",
-            scrub: 3,
-          },
-        })
-        .fromTo(".itemTraining1", { y: 0 }, { y: 0 });
-
-      gsap
-        .timeline({
-          scrollTrigger: {
-            trigger: ".itemTraining0",
-            start: "top center",
-            end: "bottom center",
-            scrub: 3,
-          },
-        })
-        .fromTo(".itemTraining0", { y: 0 }, { y: 0 });
-
-      gsap
-        .timeline({
-          scrollTrigger: {
-            trigger: ".itemTraining2",
-            start: "top center",
-            end: "bottom center",
-            scrub: 3,
-          },
-        })
-        .fromTo(".itemTraining2", { y: 0 }, { y: 0 });
+          .fromTo(".itemTraining2", { y: 0 }, { y: 0 });
+      }
     }
 
     ScrollTrigger.refresh();
@@ -159,7 +161,7 @@ function SectionHomeTraining({ ...props }) {
                     <img
                       src={e.image}
                       alt=""
-                      className="absImg duration-300 rounded-[50px] mb:rounded-[30px] group-hover:scale-[1.05]"
+                      className="absImg duration-300 rounded-[50px] mb:rounded-[30px] group-hover:dt-l-min:scale-[1.05]"
                     />
                   </div>
 
