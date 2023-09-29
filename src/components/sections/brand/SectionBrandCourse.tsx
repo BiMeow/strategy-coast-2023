@@ -223,7 +223,7 @@ function SectionBrandCourse({ ...props }) {
                 <div className="flex space-x-[20px]">
                   <div className="w-[45px] h-[45px] rounded-full border border-green flex items-center justify-center mb:w-[30px] mb:h-[30px]">
                     <p className="text-[18px] leading-[1] mt-[3px] mb:text-[14px] mb:mt-[2px]">
-                      01
+                      06
                     </p>
                   </div>
                   <div className="w-[calc(100%-45px)] pt-[15px] mb:pt-0">
