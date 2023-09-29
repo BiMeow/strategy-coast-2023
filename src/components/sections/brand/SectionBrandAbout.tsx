@@ -6,7 +6,7 @@ import { memo, useEffect } from "react";
 let listFeature = [
   {
     title:
-      "HỆ THỐNG HOÁ kiến thức, giữa biển thông tin và các \ntư vấn trái ngược nhau.",
+      "HỆ THỐNG HOÁ kiến thức giữa biển thông tin và các tư vấn trái ngược nhau.",
   },
   {
     title:
@@ -94,7 +94,12 @@ function SectionBrandAbout({ ...props }) {
                   className="itemFeature w-1/3 px-[8px] mb:w-full mb:mb-[16px]"
                   key={i}
                 >
-                  <div className="content h-full px-[35px] py-[40px] border-4 border-green rounded-[50px] mb:rounded-[30px]">
+                  <div
+                    className={`
+                    content h-full px-[35px] py-[40px] border-4 border-green rounded-[50px] mb:rounded-[30px]
+                    ${i == 0 ? "pr-[37px]" : ""}
+                    `}
+                  >
                     <p className="text-[110px] leading-[1] max-h-[60px] mb-[20px] tl-p:text-[75px] tl-p:max-h-[40px]">
                       *
                     </p>
