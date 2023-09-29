@@ -10,11 +10,11 @@ function SectionBrandCourse({ ...props }) {
         className={`SectionBrandCourse mb-[160px] tl-l:mb-[80px] mb:mb-[50px]`}
       >
         <div className="cusContainer">
-          <h2 className="text-[70px] text-green text-center mb-[50px] mb:text-[28px]">
+          <h2 className="text-[70px] text-green text-center mb-[50px] mb:text-[28px] fadeUp">
             Chương trình huấn luyện
           </h2>
 
-          <div className="px-[40px] py-[60px] mb:p-[30px] border-4 border-green rounded-[50px] mb:rounded-[30px] mb-[15px]">
+          <div className="px-[40px] py-[60px] mb:p-[30px] border-4 border-green rounded-[50px] mb:rounded-[30px] mb-[15px] fadeUp">
             <div className="flex flex-wrap mx-[-30px] text-green">
               <div className="c1 w-[40%] mb:w-full mb-[20px] px-[30px]">
                 <p className="text-[38px] tl-l:text-[32px] mb:text-[28px]">
@@ -55,7 +55,7 @@ function SectionBrandCourse({ ...props }) {
             </div>
           </div>
 
-          <div className="px-[40px] py-[60px] mb:p-[30px] border-4 border-green rounded-[50px] mb:rounded-[30px] mb-[15px]">
+          <div className="px-[40px] py-[60px] mb:p-[30px] border-4 border-green rounded-[50px] mb:rounded-[30px] mb-[15px] fadeUp">
             <div className="flex flex-wrap mx-[-30px] text-green">
               <div className="c1 w-[40%] mb:w-full mb-[20px] px-[30px]">
                 <p className="text-[38px] tl-l:text-[32px] mb:text-[28px]">
@@ -171,7 +171,7 @@ function SectionBrandCourse({ ...props }) {
             </div>
           </div>
 
-          <div className="px-[40px] py-[60px] mb:p-[30px] border-4 border-green rounded-[50px] mb:rounded-[30px] mb-[15px]">
+          <div className="px-[40px] py-[60px] mb:p-[30px] border-4 border-green rounded-[50px] mb:rounded-[30px] mb-[15px] fadeUp">
             <div className="flex flex-wrap mx-[-30px] text-green">
               <div className="c1 w-[40%] mb:w-full mb-[20px] px-[30px]">
                 <p className="text-[38px] tl-l:text-[32px] mb:text-[28px]">
@@ -211,7 +211,7 @@ function SectionBrandCourse({ ...props }) {
             </div>
           </div>
 
-          <div className="px-[40px] py-[60px] mb:p-[30px] border-4 border-green rounded-[50px] mb:rounded-[30px] mb-[15px]">
+          <div className="px-[40px] py-[60px] mb:p-[30px] border-4 border-green rounded-[50px] mb:rounded-[30px] mb-[15px] fadeUp">
             <div className="flex flex-wrap mx-[-30px] text-green">
               <div className="c1 w-[40%] mb:w-full mb-[20px] px-[30px]">
                 <p className="text-[38px] tl-l:text-[32px] mb:text-[28px]">
@@ -251,7 +251,7 @@ function SectionBrandCourse({ ...props }) {
             </div>
           </div>
 
-          <div className="px-[40px] py-[60px] mb:p-[30px] bg-green border-4 border-green rounded-[50px] mb:rounded-[30px] mb-[15px]">
+          <div className="px-[40px] py-[60px] mb:p-[30px] bg-green border-4 border-green rounded-[50px] mb:rounded-[30px] mb-[15px] fadeIn">
             <div className="flex flex-wrap mx-[-30px] text-greenDark">
               <div className="c1 w-[40%] mb:w-full mb-[20px] px-[30px]">
                 <p className="text-[38px] tl-l:text-[32px] mb:text-[28px]">

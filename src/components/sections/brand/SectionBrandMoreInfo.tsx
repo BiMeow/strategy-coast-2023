@@ -1,5 +1,6 @@
+import gsap from "gsap";
 import { useRouter } from "next/router";
-import { memo } from "react";
+import { memo, useEffect } from "react";
 
 let listCoach = [
   {
@@ -22,13 +23,30 @@ let listCoach = [
 function SectionBrandMoreInfo({ ...props }) {
   const router = useRouter();
 
+  useEffect(() => {
+    setTimeout(() => {
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: ".listCoach",
+            start: "top 60%",
+          },
+        })
+        .fromTo(
+          ".itemCoach",
+          { y: 150, autoAlpha: 0 },
+          { y: 0, autoAlpha: 1, stagger: 0.5 }
+        );
+    }, 1500);
+  }, []);
+
   return (
     <>
       <div className={`SectionBrandMoreInfo mb-[135px] mb:mb-0`}>
         <div className="cusContainer">
           <div className="relative flex items-center -mx-[10px] mb-[90px] mb:mb-[40px]">
             <div className="c1 w-[42%] px-[10px] relative z-10 tl-l:w-full">
-              <div className="who pl-[55px] pr-[60px] py-[100px] bg-green rounded-[50px] mb:rounded-[30px] mb-[16px] mb:p-[30px]">
+              <div className="who pl-[55px] pr-[60px] py-[100px] bg-green rounded-[50px] mb:rounded-[30px] mb-[16px] mb:p-[30px] fadeRight">
                 <h3 className="text-[56px] text-black mb-[35px] mb:text-[32px] mb:mb-[20px]">
                   Chương trình này dành cho ai?
                 </h3>
@@ -58,7 +76,7 @@ function SectionBrandMoreInfo({ ...props }) {
                 </p>
               </div>
 
-              <div className="relative rounded-[50px] mb:rounded-[30px] mb-[20px] overflow-hidden hidden tl-l:block">
+              <div className="relative rounded-[50px] mb:rounded-[30px] mb-[20px] overflow-hidden hidden tl-l:block fadeUp">
                 <img src="/images/home/about-1.jpg" alt="" className="absImg" />
 
                 <div className="relative content py-[30px] px-[30px] text-white">
@@ -94,7 +112,7 @@ function SectionBrandMoreInfo({ ...props }) {
                 </div>
               </div>
 
-              <div className="benefit relative px-[60px] pt-[60px] pb-[80px] bg-[#12DE00] rounded-[50px] mb:rounded-[30px] mb:p-[30px]">
+              <div className="benefit relative px-[60px] pt-[60px] pb-[80px] bg-[#12DE00] rounded-[50px] mb:rounded-[30px] mb:p-[30px] fadeLeft">
                 <h3 className="text-[56px] text-greenDark mb-[25px] mb:text-[32px]">
                   Bạn nhận được gì từ khóa huấn luyện?
                 </h3>
@@ -124,7 +142,7 @@ function SectionBrandMoreInfo({ ...props }) {
             </div>
 
             <div className="c2 w-[58%] px-[10px] relative z-10 tl-l:hidden">
-              <div className="relative rounded-[50px] mb:rounded-[30px] overflow-hidden">
+              <div className="relative rounded-[50px] mb:rounded-[30px] overflow-hidden fadeUp">
                 <div className="aspect-[800/940] dt-exl:aspect-[800/600]"></div>
 
                 <img src="/images/home/about-1.jpg" alt="" className="absImg" />
@@ -165,11 +183,11 @@ function SectionBrandMoreInfo({ ...props }) {
             </div>
           </div>
 
-          <div className="listCoach w-full max-w-[990px] mx-auto">
-            <h2 className="text-[70px] text-green text-center mb-[90px] mb:text-[32px] mb:mb-[40px]">
+          <div className="w-full max-w-[990px] mx-auto">
+            <h2 className="text-[70px] text-green text-center mb-[90px] mb:text-[32px] mb:mb-[40px] fadeUp">
               Chuyên gia huấn luyện
             </h2>
-            <div className="list w-full flex flex-wrap mx-[-25px] mb:mx-0">
+            <div className="listCoach w-full flex flex-wrap mx-[-25px] mb:mx-0">
               {listCoach.map((e: any, i: number) => (
                 <div
                   className="itemCoach w-1/3 px-[25px] text-white text-center mb:w-full mb:mb-[75px] mb-px-0"

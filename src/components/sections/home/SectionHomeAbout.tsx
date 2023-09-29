@@ -1,10 +1,37 @@
 import { IconArrow } from "@/components/elements/Icon";
+import gsap from "gsap";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { memo } from "react";
+import { memo, useEffect } from "react";
 
 function SectionHomeAbout({ ...props }) {
   const router = useRouter();
+
+  useEffect(() => {
+    setTimeout(() => {
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: ".homeAboutDeco1",
+            start: "top bottom",
+            end: "bottom top",
+            scrub: 3,
+          },
+        })
+        .fromTo(".homeAboutDeco1", { x: 0 }, { x: -200 });
+
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: ".homeAboutDeco2",
+            start: "top bottom",
+            end: "bottom top",
+            scrub: 3,
+          },
+        })
+        .fromTo(".homeAboutDeco2", { x: 0 }, { x: 200 });
+    }, 1500);
+  }, []);
 
   return (
     <>
@@ -20,7 +47,7 @@ function SectionHomeAbout({ ...props }) {
 
         <div className="cusContainer relative flex flex-wrap items-center -mx-[10px] mb:mx-0">
           <div className="c1 w-[42%] px-[10px] mb:px-0 relative z-10 tl-l:w-full tl-l:mb-[16px]">
-            <div className="story pl-[55px] pr-[80px] pt-[60px] pb-[150px] bg-greenDark rounded-[50px] mb:rounded-[30px] mb-[16px] mb:p-[30px]">
+            <div className="story pl-[55px] pr-[80px] pt-[60px] pb-[150px] bg-greenDark rounded-[50px] mb:rounded-[30px] mb-[16px] mb:p-[30px] fadeRight">
               <h3 className="text-[64px] text-green mb-[35px] mb:text-[42px]">
                 Câu chuyện <br className="hidden mb:block" /> của chúng tôi
               </h3>
@@ -44,7 +71,7 @@ function SectionHomeAbout({ ...props }) {
               </p>
             </div>
 
-            <div className="relative rounded-[50px] mb:rounded-[30px] mb-[20px] overflow-hidden hidden tl-l:block">
+            <div className="relative rounded-[50px] mb:rounded-[30px] mb-[20px] overflow-hidden hidden tl-l:block fadeUp">
               <img src="/images/home/about-1.jpg" alt="" className="absImg" />
 
               <div className="relative content py-[30px] px-[30px] text-white">
@@ -78,7 +105,7 @@ function SectionHomeAbout({ ...props }) {
               </div>
             </div>
 
-            <div className="course group relative px-[50px] pt-[75px] pb-[150px] bg-[#12DE00] rounded-[50px] mb:rounded-[30px] duration-500 mb:px-[30px] hover:bg-greenDark mb:p-[30px]">
+            <div className="course group relative px-[50px] pt-[75px] pb-[150px] bg-[#12DE00] rounded-[50px] mb:rounded-[30px] duration-500 mb:px-[30px] hover:bg-greenDark mb:p-[30px] fadeLeft">
               <h4 className="uppercase text-[18px] tracking-[2px] mb-[30px] duration-300 group-hover:text-green">
                 KHÓA ĐẶC BIỆT
               </h4>
@@ -100,7 +127,7 @@ function SectionHomeAbout({ ...props }) {
           </div>
 
           <div className="c2 w-[58%] px-[10px] mb:px-0 relative z-10 tl-l:w-full tl-l:hidden">
-            <div className="relative rounded-[50px] mb:rounded-[30px] overflow-hidden">
+            <div className="relative rounded-[50px] mb:rounded-[30px] overflow-hidden fadeUp">
               <div className="aspect-[800/940] dt-exl:aspect-[800/600]"></div>
 
               <img src="/images/home/about-1.jpg" alt="" className="absImg" />
@@ -141,13 +168,13 @@ function SectionHomeAbout({ ...props }) {
           <img
             src="/images/home/deco-wave.png"
             alt=""
-            className="absolute top-[30px] left-0 w-full max-h-[500px] object-fill"
+            className="homeAboutDeco1 absolute top-[30px] left-0 w-[calc(100%+200px)] max-w-none max-h-[500px] object-fill"
           />
 
           <img
             src="/images/home/deco-wave.png"
             alt=""
-            className="absolute bottom-[-55px] left-0 w-full max-h-[500px] object-fill"
+            className="homeAboutDeco2 absolute bottom-[-55px] right-0 w-[calc(100%+200px)] max-w-none max-h-[500px] object-fill"
           />
         </div>
       </div>
