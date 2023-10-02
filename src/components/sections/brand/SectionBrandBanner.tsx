@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 import { memo, useEffect } from "react";
 import { useWindowSize } from "usehooks-ts";
 
-function SectionBrandBanner({ ...props }) {
+function SectionBrandBanner({ data, ...props }: any) {
   const router = useRouter();
 
   const { width } = useWindowSize();
@@ -103,7 +103,7 @@ function SectionBrandBanner({ ...props }) {
           <div className="relative rounded-[50px] mb:rounded-[30px] overflow-hidden w-full h-[calc(100vh-40px)] mb:h-[calc(100vh-20px)]">
             <div className="absImg overflow-hidden">
               <img
-                src="/images/brand/banner.jpg"
+                src={data?.image || "/images/brand/banner.jpg"}
                 alt=""
                 className="bannerImage w-full h-[calc(100%+150px)] object-cover max-h-none"
               />

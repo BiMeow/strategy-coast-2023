@@ -33,7 +33,7 @@ let listPartnerLight = [
   },
 ];
 
-function SectionPartner({ isHome = true, ...props }: any) {
+function SectionPartner({ isHome = true, data = [], ...props }: any) {
   const router = useRouter();
 
   useEffect(() => {
@@ -68,7 +68,8 @@ function SectionPartner({ isHome = true, ...props }: any) {
 
           <div className="listPartner flex flex-wrap items-center justify-between px-[175px] tl-l:px-0">
             {isHome
-              ? listPartnerDark.map((e: any, i: any) => (
+              ? data.length > 0 &&
+                data.map((e: any, i: any) => (
                   <div
                     className="itemPartner tl-p:mb-[40px] tl-p:w-full"
                     key={i}

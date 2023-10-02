@@ -28,7 +28,7 @@ let listTraining = [
   },
 ];
 
-function SectionHomeTraining({ ...props }) {
+function SectionHomeTraining({ data = [], ...props }: any) {
   const router = useRouter();
 
   const { width } = useWindowSize();
@@ -146,45 +146,50 @@ function SectionHomeTraining({ ...props }) {
           </h3>
 
           <div className="listTraining flex flex-wrap mx-[-8px]">
-            {listTraining.map((e: any, i: number) => (
-              <div
-                className={`
-                itemTraining itemTraining${i} group relative w-1/3 px-[8px]
-                tl-p:w-full tl-p:mb-[20px]
-                ${i == 1 ? "mt-[40px] tl-p:mt-0" : ""}
-                `}
-                key={i}
-              >
-                <div className="relative">
-                  <div className="image relative rounded-[50px] mb:rounded-[30px] overflow-hidden">
-                    <div className="aspect-[455/585] tl-p:aspect-[380/484]"></div>
-                    <img
-                      src={e.image}
-                      alt=""
-                      className="absImg duration-300 rounded-[50px] mb:rounded-[30px] group-hover:dt-l-min:scale-[1.05]"
-                    />
-                  </div>
-
-                  <div className="content absolute w-full left-0 top-1/2 -translate-y-1/2 px-[20px]">
-                    <img
-                      src={e.deco}
-                      alt=""
-                      className={`
-                        hidden max-w-[90px] mb-[30px]
-                        mb:block
-                      
-                      `}
-                    />
-                    <h3 className="text-white whitespace-pre-wrap text-[64px] mb-[10px] tl-l:text-[42px]">
-                      {e.title}
-                    </h3>
-                    <p className="text-white">{e.description}</p>
-                  </div>
-
-                  <img
-                    src={e.deco}
-                    alt=""
+            {data.length > 0
+              ? data.map((e: any, i: number) => (
+                  <div
                     className={`
+                    itemTraining itemTraining${i} group relative w-1/3 px-[8px]
+                    tl-p:w-full tl-p:mb-[20px]
+                    ${i == 1 ? "mt-[40px] tl-p:mt-0" : ""}
+                    `}
+                    key={i}
+                  >
+                    <div className="relative">
+                      <div className="image relative rounded-[50px] mb:rounded-[30px] overflow-hidden">
+                        <div className="aspect-[455/585] tl-p:aspect-[380/484]"></div>
+                        <img
+                          src={e.image}
+                          alt=""
+                          className="absImg duration-300 rounded-[50px] mb:rounded-[30px] group-hover:dt-l-min:scale-[1.05]"
+                        />
+                      </div>
+
+                      <div className="content absolute w-full left-0 top-1/2 -translate-y-1/2 px-[20px]">
+                        <img
+                          src={e.deco}
+                          alt=""
+                          className={`
+                          hidden max-w-[90px] mb-[30px]
+                          mb:block
+                          `}
+                        />
+                        <h3 className="text-white whitespace-pre-wrap text-[64px] mb-[10px] tl-l:text-[42px]">
+                          {e.title}
+                        </h3>
+                        <div
+                          className="text-white"
+                          dangerouslySetInnerHTML={{
+                            __html: e.description,
+                          }}
+                        />
+                      </div>
+
+                      <img
+                        src={e.deco}
+                        alt=""
+                        className={`
                         itemTrainingDeco${i}
                         absolute left-[20px] max-w-[146px]
                         tl-l:max-w-[100px] tl-p:max-w-[75px]
@@ -195,10 +200,62 @@ function SectionHomeTraining({ ...props }) {
                             : "top-[-40px] tl-p:top-[20px]"
                         }
                       `}
-                  />
-                </div>
-              </div>
-            ))}
+                      />
+                    </div>
+                  </div>
+                ))
+              : listTraining.map((e: any, i: number) => (
+                  <div
+                    className={`
+                    itemTraining itemTraining${i} group relative w-1/3 px-[8px]
+                    tl-p:w-full tl-p:mb-[20px]
+                    ${i == 1 ? "mt-[40px] tl-p:mt-0" : ""}
+                    `}
+                    key={i}
+                  >
+                    <div className="relative">
+                      <div className="image relative rounded-[50px] mb:rounded-[30px] overflow-hidden">
+                        <div className="aspect-[455/585] tl-p:aspect-[380/484]"></div>
+                        <img
+                          src={e.image}
+                          alt=""
+                          className="absImg duration-300 rounded-[50px] mb:rounded-[30px] group-hover:dt-l-min:scale-[1.05]"
+                        />
+                      </div>
+
+                      <div className="content absolute w-full left-0 top-1/2 -translate-y-1/2 px-[20px]">
+                        <img
+                          src={e.deco}
+                          alt=""
+                          className={`
+                          hidden max-w-[90px] mb-[30px]
+                          mb:block
+                          `}
+                        />
+                        <h3 className="text-white whitespace-pre-wrap text-[64px] mb-[10px] tl-l:text-[42px]">
+                          {e.title}
+                        </h3>
+                        <p className="text-white">{e.description}</p>
+                      </div>
+
+                      <img
+                        src={e.deco}
+                        alt=""
+                        className={`
+                        itemTrainingDeco${i}
+                        absolute left-[20px] max-w-[146px]
+                        tl-l:max-w-[100px] tl-p:max-w-[75px]
+                        mb:hidden
+                        ${
+                          i == 1
+                            ? "bottom-[-40px] tl-p:top-[20px]"
+                            : "top-[-40px] tl-p:top-[20px]"
+                        }
+                      `}
+                      />
+                    </div>
+                  </div>
+                ))}
           </div>
         </div>
       </div>
