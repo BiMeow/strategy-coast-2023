@@ -4,21 +4,51 @@ import SectionBrandCourse from "@/components/sections/brand/SectionBrandCourse";
 import SectionBrandMoreInfo from "@/components/sections/brand/SectionBrandMoreInfo";
 import SectionPartner from "@/components/sections/common/SectionPartner";
 import { useRouter } from "next/router";
-import { memo } from "react";
+import { memo, useEffect, useState } from "react";
 
 function PageBrandGrowthRetreat({ ...props }) {
   const router = useRouter();
 
+  const [pageContent, setPageContent] = useState<any>();
+
+  const fetchPageContent = async () => {
+    const ApiCall = await fetch(
+      `https://api-coast.unixcode.dev/api/v1/pages/find-by-page-code?pageCode=TRAINING`
+    );
+    const res = await ApiCall.json();
+
+    if (res.status) {
+      setPageContent(res.data?.content);
+    }
+  };
+
+  useEffect(() => {
+    fetchPageContent();
+  }, []);
+
+  console.log(`BiMeow pageContent`, pageContent);
+
   return (
-    <>
-      <div className={`PageBrandGrowthRetreat mainPage`}>
-        <SectionBrandBanner />
-        <SectionBrandAbout />
-        <SectionBrandMoreInfo />
-        <SectionBrandCourse />
-        <SectionPartner isHome={false} />
-      </div>
-    </>
+    pageContent && (
+      <>
+        <div className={`PageBrandGrowthRetreat mainPage`}>
+          {pageContent.banner && (
+            <SectionBrandBanner data={pageContent.banner} />
+          )}
+          <SectionBrandAbout
+            slogan={pageContent.slogan}
+            intro={pageContent.introduce}
+            awards={pageContent.awards}
+          />
+          <SectionBrandMoreInfo
+            data={pageContent.about}
+            listCoach={pageContent.coach}
+          />
+          <SectionBrandCourse />
+          <SectionPartner isHome={false} />
+        </div>
+      </>
+    )
   );
 }
 
