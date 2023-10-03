@@ -168,7 +168,9 @@ function SectionHomeTraining({ data = [], ...props }: any) {
 
                       <div className="content absolute w-full left-0 top-1/2 -translate-y-1/2 px-[20px]">
                         <img
-                          src={e.deco}
+                          src={
+                            e.deco || `/images/home/deco-training-${i + 1}.svg`
+                          }
                           alt=""
                           className={`
                           hidden max-w-[90px] mb-[30px]
@@ -187,7 +189,9 @@ function SectionHomeTraining({ data = [], ...props }: any) {
                       </div>
 
                       <img
-                        src={e.deco}
+                        src={
+                          e.deco || `/images/home/deco-training-${i + 1}.svg`
+                        }
                         alt=""
                         className={`
                         itemTrainingDeco${i}
