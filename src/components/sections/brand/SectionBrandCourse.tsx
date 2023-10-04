@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import { memo } from "react";
 
-function SectionBrandCourse({ ...props }) {
+function SectionBrandCourse({ data, ...props }: any) {
   const router = useRouter();
 
   return (
@@ -266,9 +266,11 @@ function SectionBrandCourse({ ...props }) {
                     <p className="text-[24px] font-FirsNeueMedium">
                       Early Bird
                     </p>
-                    <p>(trước ngày 9/10/2023)</p>
+                    <p>{data?.earlyBird?.date || "(trước ngày 9/10/2023)"}</p>
                   </div>
-                  <p className="text-[28px] font-FirsNeueBold">11,500,000đ</p>
+                  <p className="text-[28px] font-FirsNeueBold">
+                    {data?.earlyBird?.price || "11,500,000đ"}
+                  </p>
                 </div>
               </div>
 
@@ -276,9 +278,11 @@ function SectionBrandCourse({ ...props }) {
                 <div className="">
                   <div className="mb-[10px]">
                     <p className="text-[24px] font-FirsNeueMedium">Regular</p>
-                    <p>(sau ngày 9/10/2023)</p>
+                    <p>{data?.regular?.date || "(sau ngày 9/10/2023)"}</p>
                   </div>
-                  <p className="text-[28px] font-FirsNeueBold">13,000,000đ</p>
+                  <p className="text-[28px] font-FirsNeueBold">
+                    {data?.regular?.price || "13,000,000đ"}
+                  </p>
                 </div>
               </div>
 

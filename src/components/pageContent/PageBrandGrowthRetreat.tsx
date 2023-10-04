@@ -44,7 +44,7 @@ function PageBrandGrowthRetreat({ ...props }) {
             data={pageContent.about}
             listCoach={pageContent.coach}
           />
-          <SectionBrandCourse />
+          <SectionBrandCourse data={pageContent.expense} />
           <SectionPartner isHome={false} />
         </div>
       </>
