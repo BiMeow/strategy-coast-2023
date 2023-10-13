@@ -97,7 +97,7 @@ function SectionHomeBanner({ data, ...props }: any) {
             </div>
 
             <div className="content w-full max-w-[950px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-              <h1 className="bannerTitle text-[92px] text-white text-center mb-[25px] tl-l:text-[64px] mb:text-[48px]">
+              <h1 className="bannerTitle text-[92px] text-white text-center mb-[25px] tl-l:text-[64px] mb:text-[48px] whitespace-pre-wrap">
                 {data?.title || (
                   <span>
                     Strategy that <br className="hidden mb:block" /> Inspires
