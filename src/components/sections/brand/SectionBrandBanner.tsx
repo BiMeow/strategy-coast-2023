@@ -112,13 +112,13 @@ function SectionBrandBanner({ data, ...props }: any) {
             <div className="content w-full max-w-[950px] pt-[30px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
               <div className="bannerTitle opacity-0">
                 <p className="uppercase text-[32px] leading-[1] mb-[10px] text-white text-center mb:text-[18px]">
-                  Chương trình huấn luyện
+                  {data?.subtitle || "Chương trình huấn luyện"}
                 </p>
                 <h1 className="text-[64px] text-white text-center leading-[1] mb-[10px] mb:text-[50px]">
-                  Brand Growth Retreat®
+                  {data?.title || "Brand Growth Retreat®"}
                 </h1>
                 <p className="text-[32px] text-white text-center leading-[1] mb-[50px] mb:text-[22px]">
-                  Tăng trưởng thương hiệu
+                  {data?.shortDescription || "Tăng trưởng thương hiệu"}
                 </p>
               </div>
               <div className="bannerButton flex justify-center mb-[75px] opacity-0">
@@ -129,7 +129,8 @@ function SectionBrandBanner({ data, ...props }: any) {
                       "https://docs.google.com/forms/d/1MfVRukCNszqmLORi_UVKajdS6KNKXQW5nXa4b3eEBZs/formrestricted"
                     }
                     target="_blank"
-                    className="absImg"></Link>
+                    className="absImg"
+                  ></Link>
                 </button>
               </div>
               <div className="bannerDes text-white text-center text-[20px] mb:text-[16px] opacity-0">

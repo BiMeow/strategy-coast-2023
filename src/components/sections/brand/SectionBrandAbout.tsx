@@ -57,7 +57,7 @@ function SectionBrandAbout({ slogan, intro, awards = [], ...props }: any) {
         <div className="cusContainer text-green">
           {slogan && (
             <div className="heading text-center mb-[70px]">
-              <div className="text-[110px] mb-[20px] tl-l:text-[90px] mb:text-[48px] fadeUp">
+              {/* <div className="text-[110px] mb-[20px] tl-l:text-[90px] mb:text-[48px] fadeUp">
                 {slogan?.title ? (
                   <div
                     dangerouslySetInnerHTML={{
@@ -65,21 +65,24 @@ function SectionBrandAbout({ slogan, intro, awards = [], ...props }: any) {
                     }}
                   />
                 ) : (
-                  <h2>
+                  <h1>
                     RETHINK. REFLECT.
                     <br />
                     REIMAGINE YOUR BRAND.
-                  </h2>
+                  </h1>
                 )}
-              </div>
+              </div> */}
+              <h1 className="text-[110px] mb-[20px] tl-l:text-[90px] mb:text-[48px] fadeUp">
+                RETHINK. REFLECT.
+                <br />
+                REIMAGINE YOUR BRAND.
+              </h1>
               <p className="text-[36px] mb-[30px] mb:text-[20px] fadeIn">
-                Time to get your brand a retreat!
+                {slogan?.subtitle || "Time to get your brand a retreat!"}
               </p>
-              <p className="text-[26px] mb:text-[16px] fadeIn">
-                Một chương trình huấn luyện tràn đầy cảm hứng, dành cho{" "}
-                <br className="mb:hidden" /> cá nhân và doanh nghiệp cần được HỆ
-                THỐNG HOÁ kiến <br className="mb:hidden" /> thức và KHAI MỞ TẦM
-                NHÌN tăng trưởng thương hiệu.
+              <p className="text-[26px] mb:text-[16px] fadeIn max-w-[750px] mx-auto">
+                {slogan?.shortDescription ||
+                  "Một chương trình huấn luyện tràn đầy cảm hứng, dành cho cá nhân và doanh nghiệp cần được HỆ THỐNG HOÁ kiến thức và KHAI MỞ TẦM NHÌN tăng trưởng thương hiệu."}
               </p>
             </div>
           )}
