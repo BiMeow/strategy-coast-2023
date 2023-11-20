@@ -45,7 +45,7 @@ function SectionHomeBanner({ data, ...props }: any) {
               { y: 0, autoAlpha: 1, ease: Power4.easeOut },
               1
             );
-        }, 1500);
+        }, 800);
       } else {
         setTimeout(() => {
           gsap
@@ -78,7 +78,7 @@ function SectionHomeBanner({ data, ...props }: any) {
               { y: 0, autoAlpha: 1, ease: Power4.easeOut },
               1
             );
-        }, 1500);
+        }, 800);
       }
     }
   }, [width]);

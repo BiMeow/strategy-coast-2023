@@ -30,7 +30,7 @@ function SectionHomeAbout({ data, ...props }: any) {
           },
         })
         .fromTo(".homeAboutDeco2", { x: 0 }, { x: 200 });
-    }, 1500);
+    }, 800);
   }, []);
 
   return (

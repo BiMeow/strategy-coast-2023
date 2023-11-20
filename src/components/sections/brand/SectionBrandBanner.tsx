@@ -123,11 +123,9 @@ function SectionBrandBanner({ data, ...props }: any) {
               </div>
               <div className="bannerButton flex justify-center mb-[75px] opacity-0">
                 <button className="relative btnMainGreen">
-                  Đăng ký ghi danh
+                  {data?.buttonText}
                   <Link
-                    href={
-                      "https://docs.google.com/forms/d/1MfVRukCNszqmLORi_UVKajdS6KNKXQW5nXa4b3eEBZs/formrestricted"
-                    }
+                    href={data?.buttonLink}
                     target="_blank"
                     className="absImg"
                   ></Link>

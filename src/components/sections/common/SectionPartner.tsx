@@ -50,7 +50,7 @@ function SectionPartner({ isHome = true, data = [], ...props }: any) {
           { scale: 0, autoAlpha: 0 },
           { scale: 1, autoAlpha: 1, stagger: 0.3, ease: Bounce.easeInOut }
         );
-    }, 1500);
+    }, 800);
   }, []);
 
   return (

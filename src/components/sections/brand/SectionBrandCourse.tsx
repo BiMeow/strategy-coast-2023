@@ -260,13 +260,17 @@ function SectionBrandCourse({ data, ...props }: any) {
                 <p>(Chưa bao gồm VAT)</p>
               </div>
 
-              <div className="c2 w-[30%] mb:w-full px-[30px] mb:mb-[20px]">
+              <div className="c2 w-[30%] mb-[25px] mb:w-full px-[30px] mb:mb-[20px]">
                 <div className="">
                   <div className="mb-[10px]">
                     <p className="text-[24px] font-FirsNeueMedium">
                       Early Bird
                     </p>
-                    <p>{data?.earlyBird?.date || "(trước ngày 9/10/2023)"}</p>
+                    <p>
+                      {data?.earlyBird?.date != "null"
+                        ? data?.earlyBird?.date
+                        : ""}
+                    </p>
                   </div>
                   <p className="text-[28px] font-FirsNeueBold">
                     {data?.earlyBird?.price || "11,500,000đ"}
@@ -275,10 +279,12 @@ function SectionBrandCourse({ data, ...props }: any) {
               </div>
 
               <div className="c3 w-[30%] mb-[25px] mb:w-full px-[30px]">
-                <div className="">
+                <div className="h-full flex flex-col justify-between">
                   <div className="mb-[10px]">
                     <p className="text-[24px] font-FirsNeueMedium">Regular</p>
-                    <p>{data?.regular?.date || "(sau ngày 9/10/2023)"}</p>
+                    <p>
+                      {data?.regular?.date != "null" ? data?.regular?.date : ""}
+                    </p>
                   </div>
                   <p className="text-[28px] font-FirsNeueBold">
                     {data?.regular?.price || "13,000,000đ"}
