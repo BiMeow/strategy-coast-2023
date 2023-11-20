@@ -25,7 +25,7 @@ const MainProvider: React.FC<Props> = ({ children, isPrivate }) => {
         .timeline({
           scrollTrigger: {
             trigger: l,
-            start: "top 75%",
+            start: "top 80%",
           },
         })
         .fromTo(l, { autoAlpha: 0, opacity: 0 }, { autoAlpha: 1, opacity: 1 });
@@ -37,12 +37,12 @@ const MainProvider: React.FC<Props> = ({ children, isPrivate }) => {
         .timeline({
           scrollTrigger: {
             trigger: l,
-            start: "top 75%",
+            start: "top 80%",
           },
         })
         .fromTo(
           l,
-          { y: 150, autoAlpha: 0, opacity: 0 },
+          { y: 75, autoAlpha: 0, opacity: 0 },
           { y: 0, autoAlpha: 1, opacity: 1 }
         );
     });
@@ -53,12 +53,12 @@ const MainProvider: React.FC<Props> = ({ children, isPrivate }) => {
         .timeline({
           scrollTrigger: {
             trigger: l,
-            start: "top 75%",
+            start: "top 80%",
           },
         })
         .fromTo(
           l,
-          { y: -150, autoAlpha: 0, opacity: 1 },
+          { y: -75, autoAlpha: 0, opacity: 1 },
           { y: 0, autoAlpha: 1, opacity: 1 }
         );
     });
@@ -69,12 +69,12 @@ const MainProvider: React.FC<Props> = ({ children, isPrivate }) => {
         .timeline({
           scrollTrigger: {
             trigger: l,
-            start: "top 75%",
+            start: "top 80%",
           },
         })
         .fromTo(
           l,
-          { x: -150, autoAlpha: 0, opacity: 0 },
+          { x: -75, autoAlpha: 0, opacity: 0 },
           { x: 0, autoAlpha: 1, opacity: 1 }
         );
     });
@@ -85,12 +85,12 @@ const MainProvider: React.FC<Props> = ({ children, isPrivate }) => {
         .timeline({
           scrollTrigger: {
             trigger: l,
-            start: "top 75%",
+            start: "top 80%",
           },
         })
         .fromTo(
           l,
-          { x: 150, autoAlpha: 0, opacity: 0 },
+          { x: 75, autoAlpha: 0, opacity: 0 },
           { x: 0, autoAlpha: 1, opacity: 1 }
         );
     });
@@ -102,7 +102,7 @@ const MainProvider: React.FC<Props> = ({ children, isPrivate }) => {
     setTimeout(() => {
       initAnimation();
       setIsLoading(false);
-    }, 1500);
+    }, 750);
   }, []);
 
   return <MainContext.Provider value={{}}>{children}</MainContext.Provider>;

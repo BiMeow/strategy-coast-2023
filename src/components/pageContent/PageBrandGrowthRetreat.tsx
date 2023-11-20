@@ -1,6 +1,7 @@
 import SectionBrandAbout from "@/components/sections/brand/SectionBrandAbout";
 import SectionBrandBanner from "@/components/sections/brand/SectionBrandBanner";
 import SectionBrandCourse from "@/components/sections/brand/SectionBrandCourse";
+import SectionBrandCourseV2 from "@/components/sections/brand/SectionBrandCourseV2";
 import SectionBrandMoreInfo from "@/components/sections/brand/SectionBrandMoreInfo";
 import SectionPartner from "@/components/sections/common/SectionPartner";
 import { useRouter } from "next/router";
@@ -26,8 +27,6 @@ function PageBrandGrowthRetreat({ ...props }) {
     fetchPageContent();
   }, []);
 
-  console.log(`BiMeow pageContent`, pageContent);
-
   return (
     pageContent && (
       <>
@@ -44,7 +43,7 @@ function PageBrandGrowthRetreat({ ...props }) {
             data={pageContent.about}
             listCoach={pageContent.coach}
           />
-          <SectionBrandCourse data={pageContent.expense} />
+          <SectionBrandCourseV2 data={pageContent.expense} />
           <SectionPartner isHome={false} />
         </div>
       </>

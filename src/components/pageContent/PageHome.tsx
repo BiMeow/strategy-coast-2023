@@ -1,6 +1,7 @@
 import SectionPartner from "@/components/sections/common/SectionPartner";
 import SectionHomeAbout from "@/components/sections/home/SectionHomeAbout";
 import SectionHomeBanner from "@/components/sections/home/SectionHomeBanner";
+import SectionHomeMember from "@/components/sections/home/SectionHomeMember";
 import SectionHomeTraining from "@/components/sections/home/SectionHomeTraining";
 import { useRouter } from "next/router";
 import { memo, useEffect, useState } from "react";
@@ -35,6 +36,7 @@ function PageHome({ ...props }) {
             <SectionHomeBanner data={pageContent.banner} />
           )}
           {pageContent.about && <SectionHomeAbout data={pageContent.about} />}
+          <SectionHomeMember />
           {pageContent.service && (
             <SectionHomeTraining data={pageContent.service} />
           )}

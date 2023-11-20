@@ -1,7 +1,7 @@
-import { IconArrow } from "@/components/elements/Icon";
 import gsap from "gsap";
 import { useRouter } from "next/router";
 import { memo, useEffect } from "react";
+import Slider from "react-slick";
 
 let listFeature = [
   {
@@ -18,8 +18,29 @@ let listFeature = [
   },
 ];
 
+let listImages = [
+  "/images/brand/about.jpg",
+  "/images/brand/about-2.jpg",
+  "/images/brand/about-3.jpg",
+  "/images/brand/about-4.jpg",
+];
+
 function SectionBrandAbout({ slogan, intro, awards = [], ...props }: any) {
   const router = useRouter();
+
+  const settings = {
+    dots: true,
+    arrows: false,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    fade: true,
+    autoplay: true,
+    speed: 1000,
+    autoplaySpeed: 5000,
+    cssEase: "linear",
+    pauseOnHover: false,
+  };
 
   useEffect(() => {
     setTimeout(() => {
@@ -46,7 +67,7 @@ function SectionBrandAbout({ slogan, intro, awards = [], ...props }: any) {
           { scale: 0, autoAlpha: 0 },
           { scale: 1, autoAlpha: 1, stagger: 0.5 }
         );
-    }, 1500);
+    }, 800);
   }, []);
 
   return (
@@ -77,10 +98,10 @@ function SectionBrandAbout({ slogan, intro, awards = [], ...props }: any) {
                 <br />
                 REIMAGINE YOUR BRAND.
               </h1>
-              <p className="text-[36px] mb-[30px] mb:text-[20px] fadeIn">
+              <p className="text-[36px] mb-[30px] mb:text-[20px] fadeUp">
                 {slogan?.subtitle || "Time to get your brand a retreat!"}
               </p>
-              <p className="text-[26px] mb:text-[16px] fadeIn max-w-[750px] mx-auto">
+              <p className="text-[26px] mb:text-[16px] fadeUp max-w-[750px] mx-auto">
                 {slogan?.shortDescription ||
                   "Một chương trình huấn luyện tràn đầy cảm hứng, dành cho cá nhân và doanh nghiệp cần được HỆ THỐNG HOÁ kiến thức và KHAI MỞ TẦM NHÌN tăng trưởng thương hiệu."}
               </p>
@@ -89,18 +110,24 @@ function SectionBrandAbout({ slogan, intro, awards = [], ...props }: any) {
 
           {intro && (
             <div className="content">
-              <div className="image brandAboutImage relative rounded-[50px] mb:rounded-[30px] overflow-hidden">
-                <div className="aspect-[1400/675] tl-p:aspect-[1400/775] mb:aspect-1"></div>
-                <img
-                  src={intro?.image || "/images/brand/about.jpg"}
-                  alt=""
-                  className="absImg"
-                />
+              <div className="brandAboutImage">
+                <Slider {...settings} className="cusBrandImageSlider">
+                  {listImages.map((e: any, i: number) => (
+                    <div
+                      className="image relative rounded-[50px] mb:rounded-[30px] overflow-hidden"
+                      key={i}
+                    >
+                      <div className="aspect-[1400/675] tl-p:aspect-[1400/775] mb:aspect-1"></div>
+                      <img src={e} alt="" className="absImg" />
+                    </div>
+                  ))}
+                </Slider>
               </div>
 
-              <div className="text-[36px] w-[40%] mt-[-165px] mb-[50px] relative z-10 tl-p:w-[75%] mb:w-full mb:mt-[-100px] mb:text-[26px] fadeUp">
+              <div className="text-[36px] !text-green w-[40%] mt-[-165px] mb-[50px] relative z-10 tl-p:w-[75%] mb:w-full mb:mt-[-100px] mb:text-[26px] fadeUp">
                 {intro?.description ? (
                   <div
+                    className="textEditor"
                     dangerouslySetInnerHTML={{
                       __html: intro?.description,
                     }}
@@ -136,6 +163,7 @@ function SectionBrandAbout({ slogan, intro, awards = [], ...props }: any) {
                           </p>
                           <div className="text-[28px] whitespace-pre-wrap tl-p:text-[20px]">
                             <div
+                              className="textEditor"
                               dangerouslySetInnerHTML={{
                                 __html: e.description,
                               }}
@@ -160,6 +188,7 @@ function SectionBrandAbout({ slogan, intro, awards = [], ...props }: any) {
                           </p>
                           <div className="text-[28px] whitespace-pre-wrap tl-p:text-[20px]">
                             <div
+                              className="textEditor"
                               dangerouslySetInnerHTML={{
                                 __html: e.description,
                               }}

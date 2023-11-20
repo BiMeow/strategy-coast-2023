@@ -20,7 +20,7 @@ function Footer({ isHome = true, ...props }) {
           { scale: 0, autoAlpha: 0 },
           { scale: 1, autoAlpha: 1, ease: Elastic.easeOut }
         );
-    }, 1500);
+    }, 800);
   }, []);
 
   return (

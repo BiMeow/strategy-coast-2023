@@ -82,7 +82,7 @@ function SectionHomeTraining({ data = [], ...props }: any) {
               },
             })
             .fromTo(".itemTraining2", { y: 0 }, { y: 40 });
-        }, 1500);
+        }, 800);
       } else {
         gsap
           .timeline({

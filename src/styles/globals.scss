@@ -70,6 +70,40 @@ p {
   animation: marquee 5s linear infinite alternate;
 }
 
+.textEditor {
+  span,
+  p {
+    color: #bdff00 !important;
+  }
+}
+
+.cusBrandImageSlider {
+  .slick-dots {
+    display: flex !important;
+    width: fit-content;
+    position: absolute;
+    bottom: 20px;
+    right: 50px;
+
+    li,
+    button {
+      width: 10px;
+      height: 10px;
+      background: #bdff00 !important;
+      border-radius: 50%;
+      opacity: 0.3;
+
+      &::before {
+        display: none !important;
+      }
+
+      &.slick-active {
+        opacity: 1;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 767px) {
   body {
     font-size: 16px;

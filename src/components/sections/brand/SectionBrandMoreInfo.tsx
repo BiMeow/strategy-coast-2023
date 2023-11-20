@@ -37,7 +37,7 @@ function SectionBrandMoreInfo({ data, listCoach = [], ...props }: any) {
           { y: 150, autoAlpha: 0 },
           { y: 0, autoAlpha: 1, stagger: 0.5 }
         );
-    }, 1500);
+    }, 800);
   }, []);
 
   return (
@@ -226,18 +226,18 @@ function SectionBrandMoreInfo({ data, listCoach = [], ...props }: any) {
             </div>
           </div>
 
-          <div className="w-full max-w-[990px] mx-auto">
+          <div className="w-full max-w-[1320px] mx-auto">
             <h2 className="text-[70px] text-green text-center mb-[90px] mb:text-[32px] mb:mb-[40px] fadeUp">
               Chuyên gia huấn luyện
             </h2>
-            <div className="listCoach w-full flex flex-wrap mx-[-25px] mb:mx-0">
+            <div className="listCoach w-full flex flex-wrap mb:mx-0">
               {listCoach.length > 0
                 ? listCoach.map((e: any, i: number) => (
                     <div
-                      className="itemCoach w-1/3 px-[25px] text-white text-center mb:w-full mb:mb-[75px] mb-px-0"
+                      className="itemCoach w-1/4 px-[20px] text-white text-center mb:w-full mb:mb-[75px] mb-px-0"
                       key={i}
                     >
-                      <div className="image relative rounded-full overflow-hidden mb-[25px]">
+                      <div className="image relative rounded-full overflow-hidden mb-[25px] w-[90%] mx-auto">
                         <div className="aspect-1"></div>
                         <img src={e.image} alt="" className="absImg" />
                       </div>
