@@ -88,7 +88,7 @@ function MasterPage({
           <Loading />
           <Header isHome={isHome} activeNav={activeNav} />
           <div className={`pageContent`}>{children}</div>
-          <Footer isHome={isHome} link={pageContent?.banner?.buttionLink} />
+          <Footer isHome={isHome} link={pageContent?.banner?.buttonLink} />
         </main>
       </Providers>
     </>
