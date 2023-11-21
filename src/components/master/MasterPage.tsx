@@ -6,6 +6,7 @@ import Preloader from "@/components/elements/Preloader";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import Script from "next/script";
+import { useEffect, useState } from "react";
 
 function MasterPage({
   isHome = true,
@@ -17,6 +18,23 @@ function MasterPage({
   const router = useRouter();
 
   const { children } = props;
+
+  const [pageContent, setPageContent] = useState<any>();
+
+  const fetchPageContent = async () => {
+    const ApiCall = await fetch(
+      `https://api-coast.unixcode.dev/api/v1/pages/find-by-page-code?pageCode=TRAINING`
+    );
+    const res = await ApiCall.json();
+
+    if (res.status) {
+      setPageContent(res.data?.content);
+    }
+  };
+
+  useEffect(() => {
+    fetchPageContent();
+  }, []);
 
   return (
     <>
@@ -66,12 +84,11 @@ function MasterPage({
           MasterPage min-h-screen py-[20px] 
           mb:py-[10px] mb:pb-[20px]
           ${isHome ? "bg-green" : "bg-greenDark"}
-          `}
-        >
+          `}>
           <Loading />
           <Header isHome={isHome} activeNav={activeNav} />
           <div className={`pageContent`}>{children}</div>
-          <Footer isHome={isHome} />
+          <Footer isHome={isHome} link={pageContent?.banner?.buttionLink} />
         </main>
       </Providers>
     </>
