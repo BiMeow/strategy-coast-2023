@@ -40,8 +40,7 @@ function SectionBrandCourseV2({ data, ...props }: any) {
   return (
     <>
       <div
-        className={`SectionBrandCourseV2 mb-[160px] tl-l:mb-[80px] mb:mb-[50px]`}
-      >
+        className={`SectionBrandCourseV2 mb-[160px] tl-l:mb-[80px] mb:mb-[50px]`}>
         <div className="cusContainer max-w-[1660px] mx-auto">
           <h2 className="text-[70px] text-green text-center mb-[50px] mb:text-[28px] fadeUp">
             Chương trình huấn luyện
@@ -92,7 +91,7 @@ function SectionBrandCourseV2({ data, ...props }: any) {
                 <p className="text-[38px] tl-l:text-[32px] mb:text-[28px]">
                   Chi phí khóa học:
                 </p>
-                <p>(Chưa bao gồm VAT)</p>
+                <p>(Đã bao gồm VAT)</p>
               </div>
 
               <div className="c2 w-[30%] mb:w-full px-[30px] mb:mb-[20px]">
