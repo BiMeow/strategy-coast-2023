@@ -59,7 +59,7 @@ function MasterPage({
         t.src=v;s=b.getElementsByTagName(e)[0];
         s.parentNode.insertBefore(t,s)}(window, document,'script',
         'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '317706047697199');
+        fbq('init', '1055482942201874');
         fbq('track', 'PageView');
       `}
       </Script>
@@ -109,8 +109,7 @@ function MasterPage({
           MasterPage min-h-screen py-[20px] 
           mb:py-[10px] mb:pb-[20px]
           ${isHome ? "bg-green" : "bg-greenDark"}
-          `}
-        >
+          `}>
           <Loading />
           <Header isHome={isHome} activeNav={activeNav} />
           <div className={`pageContent`}>{children}</div>
@@ -123,8 +122,18 @@ function MasterPage({
                   src="https://www.googletagmanager.com/ns.html?id=GTM-KKPDZ3RV"
                   height="0"
                   width="0"
-                  style={{ display: "none", visibility: "hidden" }}
-                ></iframe>
+                  style={{ display: "none", visibility: "hidden" }}></iframe>
+              ),
+            }}
+          />
+          <noscript
+            dangerouslySetInnerHTML={{
+              __html: (
+                <iframe
+                  src="https://www.facebook.com/tr?id=1055482942201874&ev=PageView&noscript=1"
+                  height="0"
+                  width="0"
+                  style={{ display: "none", visibility: "hidden" }}></iframe>
               ),
             }}
           />
