@@ -42,13 +42,13 @@ function SectionPartner({ isHome = true, data = [], ...props }: any) {
         .timeline({
           scrollTrigger: {
             trigger: ".listPartner",
-            start: "top 60%",
+            start: "50px bottom",
           },
         })
         .fromTo(
           ".itemPartner",
           { scale: 0, autoAlpha: 0 },
-          { scale: 1, autoAlpha: 1, stagger: 0.3, ease: Bounce.easeInOut }
+          { scale: 1, autoAlpha: 1, stagger: 0.2, ease: Bounce.easeInOut }
         );
     }, 800);
   }, []);

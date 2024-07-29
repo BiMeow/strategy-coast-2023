@@ -140,7 +140,7 @@ p {
   }
 
   .btnMainGreen {
-    @apply px-[60px] pt-[12px] pb-[10px] leading-[1] bg-green text-greenDark text-[28px] font-FirsNeueMedium rounded-[50px] mb:rounded-[30px] duration-500 hover:text-white hover:bg-[#bdff00bb];
+    @apply px-[60px] pt-[12px] pb-[10px] leading-[1] bg-green text-greenDark text-[28px] font-FirsNeueMedium rounded-[50px] mb:rounded-[30px] duration-500 hover:text-white hover:bg-[#bdff00bb] mb:px-[30px];
   }
 }
 

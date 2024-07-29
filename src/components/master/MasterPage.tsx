@@ -10,6 +10,7 @@ import { useEffect, useState } from "react";
 
 function MasterPage({
   isHome = true,
+  isThink = false,
   activeNav = 2,
   title = "Strategy Coast",
   description = "Strategy - chiến lược / Coast - bờ biển. StrategyCoast® là nơi chúng tôi coach về strategy, và cũng là một nơi “cực chill” để khai mở tầm nhìn và cảm hứng sáng tạo.",
@@ -108,8 +109,9 @@ function MasterPage({
           className={`
           MasterPage min-h-screen py-[20px] 
           mb:py-[10px] mb:pb-[20px]
-          ${isHome ? "bg-green" : "bg-greenDark"}
-          `}>
+          ${isThink ? "bg-[#042cba]" : isHome ? "bg-green" : "bg-greenDark"}
+          `}
+        >
           <Loading />
           <Header isHome={isHome} activeNav={activeNav} />
           <div className={`pageContent`}>{children}</div>
@@ -122,7 +124,8 @@ function MasterPage({
                   src="https://www.googletagmanager.com/ns.html?id=GTM-KKPDZ3RV"
                   height="0"
                   width="0"
-                  style={{ display: "none", visibility: "hidden" }}></iframe>
+                  style={{ display: "none", visibility: "hidden" }}
+                ></iframe>
               ),
             }}
           />
@@ -133,7 +136,8 @@ function MasterPage({
                   src="https://www.facebook.com/tr?id=1055482942201874&ev=PageView&noscript=1"
                   height="0"
                   width="0"
-                  style={{ display: "none", visibility: "hidden" }}></iframe>
+                  style={{ display: "none", visibility: "hidden" }}
+                ></iframe>
               ),
             }}
           />
