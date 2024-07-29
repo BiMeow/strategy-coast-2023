@@ -3,59 +3,29 @@ import { useRouter } from "next/router";
 import { memo, useEffect, useState } from "react";
 import { useWindowSize } from "usehooks-ts";
 
+let listMenu = [
+  {
+    title: "Think like a Strategist®",
+    href: "/thinklikeastrategist",
+  },
+  {
+    title: "Brand Growth Retreat®",
+    href: "/BrandGrowthRetreat",
+  },
+  {
+    title: "Giới thiệu StrategyCoast®",
+    href: "/",
+  },
+];
+
 function Header({ activeNav = 2, ...props }: any) {
   const router = useRouter();
 
   const { width } = useWindowSize();
 
-  const [scrollY, setScrollY] = useState<number>(0);
-  const [prevY, setPrevY] = useState<number>(0);
   const [showHeader, setShowHeader] = useState<boolean>(true);
   const [isTopPage, setIsTopPage] = useState<boolean>(true);
   const [showMenu, setShowMenu] = useState<boolean>(false);
-
-  // const handleScroll = () => {
-  //   let curY = window.scrollY;
-
-  //   if (curY < 50) {
-  //     //setIsTopPage(true);
-  //     //setShowHeader(true);
-  //   } else {
-  //     //setIsTopPage(false);
-  //     //setShowHeader(false);
-  //   }
-
-  //   if (prevY < curY) setShowHeader(false);
-  //   else setShowHeader(true);
-
-  //   setPrevY(curY);
-  // };
-
-  // useEffect(() => {
-  //   handleScroll();
-  // }, [scrollY]);
-
-  // useEffect(() => {
-  //   // listen for browser changed
-  //   const handler = () => {
-  //     if (window) {
-  //       const scrollY = window.scrollY;
-  //       setScrollY(scrollY);
-  //     }
-  //   };
-
-  //   if (window) {
-  //     window.addEventListener("scroll", handler, {
-  //       capture: false,
-  //       passive: true,
-  //     });
-  //     handler();
-  //   }
-
-  //   return () => {
-  //     window.removeEventListener("scroll", handler);
-  //   };
-  // }, []);
 
   return (
     <>
@@ -104,29 +74,19 @@ function Header({ activeNav = 2, ...props }: any) {
             }
             `}
           >
-            <div className="relative group cursor-pointer ">
-              <p
-                className={`
+            {listMenu.map((e: any, i: number) => (
+              <div className="relative group cursor-pointer" key={i}>
+                <p
+                  className={`
                 duration-300 group-hover:text-green
-                ${activeNav == 1 ? "text-green" : "text-white"}
+                ${activeNav == i ? "text-green" : "text-white"}
                 `}
-              >
-                Brand Growth Retreat®
-              </p>
-              <Link href="/BrandGrowthRetreat" className="absImg"></Link>
-            </div>
-
-            <div className="relative group cursor-pointer ">
-              <p
-                className={`
-               duration-300 group-hover:text-green
-                ${activeNav == 2 ? "text-green" : "text-white"}
-                `}
-              >
-                Giới thiệu StrategyCoast®
-              </p>
-              <Link href="/" className="absImg"></Link>
-            </div>
+                >
+                  {e.title}
+                </p>
+                <Link href={e.href} className="absImg"></Link>
+              </div>
+            ))}
           </div>
         </div>
       </div>

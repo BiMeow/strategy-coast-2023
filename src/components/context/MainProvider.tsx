@@ -25,7 +25,7 @@ const MainProvider: React.FC<Props> = ({ children, isPrivate }) => {
         .timeline({
           scrollTrigger: {
             trigger: l,
-            start: "top 80%",
+            start: "50px bottom",
           },
         })
         .fromTo(l, { autoAlpha: 0, opacity: 0 }, { autoAlpha: 1, opacity: 1 });
@@ -37,7 +37,7 @@ const MainProvider: React.FC<Props> = ({ children, isPrivate }) => {
         .timeline({
           scrollTrigger: {
             trigger: l,
-            start: "top 80%",
+            start: "50px bottom",
           },
         })
         .fromTo(
@@ -53,7 +53,7 @@ const MainProvider: React.FC<Props> = ({ children, isPrivate }) => {
         .timeline({
           scrollTrigger: {
             trigger: l,
-            start: "top 80%",
+            start: "50px bottom",
           },
         })
         .fromTo(
@@ -69,7 +69,7 @@ const MainProvider: React.FC<Props> = ({ children, isPrivate }) => {
         .timeline({
           scrollTrigger: {
             trigger: l,
-            start: "top 80%",
+            start: "50px bottom",
           },
         })
         .fromTo(
@@ -85,7 +85,7 @@ const MainProvider: React.FC<Props> = ({ children, isPrivate }) => {
         .timeline({
           scrollTrigger: {
             trigger: l,
-            start: "top 80%",
+            start: "50px bottom",
           },
         })
         .fromTo(
