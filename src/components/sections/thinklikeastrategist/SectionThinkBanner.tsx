@@ -42,12 +42,12 @@ function SectionThinkBanner({ ...props }) {
     <>
       <div className={`SectionThinkBanner secSpacing`}>
         <div className="cusContainer">
-          <div className="relative rounded-[50px] mb:rounded-[30px] overflow-hidden aspect-[140/75] w-full mb:aspect-[38/60]">
+          <div className="relative rounded-[50px] mb:rounded-[30px] overflow-hidden w-full  h-[calc(100vh-40px)] mb:h-[calc(100vh-20px)]">
             <div className="absImg overflow-hidden">
               <img
                 src={"/images/think/banner.png"}
                 alt=""
-                className="bannerImage w-full h-[calc(100%+150px)] object-cover max-h-none mb:object-left"
+                className="bannerImage w-full h-[calc(100%+150px)] object-cover max-h-none "
               />
             </div>
 

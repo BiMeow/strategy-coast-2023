@@ -6,8 +6,8 @@ function SectionThinkInfo({ ...props }) {
   const { width } = useWindowSize();
 
   useEffect(() => {
-    setTimeout(() => {
-      if (width > 992)
+    if (width > 992) {
+      setTimeout(() => {
         gsap
           .timeline({
             scrollTrigger: {
@@ -18,8 +18,9 @@ function SectionThinkInfo({ ...props }) {
             },
           })
           .fromTo(".thinkInfoImage", { y: 0 }, { y: 300 });
-    }, 800);
-  }, []);
+      }, 800);
+    }
+  }, [width]);
 
   return (
     <>
