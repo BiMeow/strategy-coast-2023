@@ -14,7 +14,7 @@ function PageBrandGrowthRetreat({ ...props }) {
 
   const fetchPageContent = async () => {
     const ApiCall = await fetch(
-      `https://api-coast.unixcode.dev/api/v1/pages/find-by-page-code?pageCode=TRAINING`
+      `https://api-coast.aivn.site/api/v1/pages/find-by-page-code?pageCode=TRAINING`
     );
     const res = await ApiCall.json();
 
