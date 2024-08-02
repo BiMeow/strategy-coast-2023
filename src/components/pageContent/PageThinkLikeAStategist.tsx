@@ -11,7 +11,7 @@ function PageHome({ ...props }) {
 
   return (
     <>
-      <div className={`PageHome mainPage pt-[130px]`}>
+      <div className={`PageHome mainPage`}>
         <SectionThinkBanner />
         <SectionThinkInfo />
         <SectionThinkCoach />

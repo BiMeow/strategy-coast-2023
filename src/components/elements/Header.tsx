@@ -62,31 +62,27 @@ function Header({ activeNav = 2, ...props }: any) {
 
           <div
             className={`
-            flex space-x-[45px] text-white text-[20px] font-FirsNeueMedium overflow-hidden duration-500
-            tl-p:w-full tl-p:justify-end tl-p:mt-[20px]
+            overflow-auto duration-500
+            tl-p:mt-[20px]
             mb:text-[16px]
-            ${
-              width < 767
-                ? showMenu
-                  ? "max-h-[100px]"
-                  : "max-h-0 opacity-0"
-                : ""
-            }
+            ${showMenu ? "mb:max-h-[100px]" : "mb:max-h-0 mb:opacity-0"}
             `}
           >
-            {listMenu.map((e: any, i: number) => (
-              <div className="relative group cursor-pointer" key={i}>
-                <p
-                  className={`
-                duration-300 group-hover:text-green
-                ${activeNav == i ? "text-green" : "text-white"}
-                `}
-                >
-                  {e.title}
-                </p>
-                <Link href={e.href} className="absImg"></Link>
-              </div>
-            ))}
+            <div className="flex w-max space-x-[45px] text-white text-[20px] font-FirsNeueMedium mb:space-x-[25px]">
+              {listMenu.map((e: any, i: number) => (
+                <div className="relative group cursor-pointer" key={i}>
+                  <p
+                    className={`
+                  duration-300 group-hover:text-green whitespace-nowrap
+                  ${activeNav == i ? "text-green" : "text-white"}
+                  `}
+                  >
+                    {e.title}
+                  </p>
+                  <Link href={e.href} className="absImg"></Link>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
