@@ -32,10 +32,11 @@ function Header({ activeNav = 2, ...props }: any) {
       <div
         className={`
         Header absolute w-full pb-[20px] z-[444] top-0 left-0 px-[75px] duration-300
-        tl-p:px-[30px]
+        tl-p:px-[50px]
+        mb:px-[30px]
         ${
           isTopPage
-            ? "pt-[60px] tl-p:pt-[30px]"
+            ? "pt-[60px] tl-p:pt-[50px] mb:pt-[30px]"
             : "pt-[20px] bg-[#000d] backdrop-blur-[20px]"
         }
         ${width < 767 ? (showHeader ? "" : "translate-y-[-100%]") : ""}
@@ -62,13 +63,13 @@ function Header({ activeNav = 2, ...props }: any) {
 
           <div
             className={`
-            overflow-auto duration-500
-            tl-p:mt-[20px]
+            overflow-x-auto overflow-y-hidden duration-500
+            tl-p:mt-[20px] tl-p:w-full
             mb:text-[16px]
-            ${showMenu ? "mb:max-h-[100px]" : "mb:max-h-0 mb:opacity-0"}
+            ${showMenu ? "tl-p:max-h-[100px]" : "tl-p:max-h-0 tl-p:opacity-0"}
             `}
           >
-            <div className="flex w-max space-x-[45px] text-white text-[20px] font-FirsNeueMedium mb:space-x-[25px]">
+            <div className="flex w-max ml-auto space-x-[45px] text-white text-[20px] font-FirsNeueMedium tl-p:space-x-[25px]">
               {listMenu.map((e: any, i: number) => (
                 <div className="relative group cursor-pointer" key={i}>
                   <p
