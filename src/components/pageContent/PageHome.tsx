@@ -13,7 +13,7 @@ function PageHome({ ...props }) {
 
   const fetchPageContent = async () => {
     const ApiCall = await fetch(
-      `https://api-coast.unixcode.dev/api/v1/pages/find-by-page-code?pageCode=HOME`
+      `https://api-coast.aivn.site/api/v1/pages/find-by-page-code?pageCode=HOME`
     );
     const res = await ApiCall.json();
 
