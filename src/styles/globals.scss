@@ -44,6 +44,14 @@
   font-style: normal;
 }
 
+* {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 html,
 body {
   //scroll-behavior: smooth !important;

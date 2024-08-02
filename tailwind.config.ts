@@ -14,7 +14,7 @@ const config: Config = {
         "dt-xl": { max: "1660px" },
         "dt-l": { max: "1440px" },
         "tl-l": { max: "1366px" },
-        "tl-p": { max: "1000px" },
+        "tl-p": { max: "1100px" },
         mb: { max: "767px" },
       },
 
