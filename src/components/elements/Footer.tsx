@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { memo, useEffect } from "react";
 
-function Footer({ isHome = true, link, ...props }: any) {
+function Footer({ isHome = true, isThink = false, link, ...props }: any) {
   const router = useRouter();
 
   useEffect(() => {
@@ -36,15 +36,19 @@ function Footer({ isHome = true, link, ...props }: any) {
                 className={`
               relative
                ${isHome ? "btnMain" : "btnMainGreen"}
-              `}>
+              `}
+              >
                 Đăng ký ghi danh
                 <Link
                   href={
-                    link ||
-                    "https://docs.google.com/forms/d/1MfVRukCNszqmLORi_UVKajdS6KNKXQW5nXa4b3eEBZs/formrestricted"
+                    isThink
+                      ? "https://forms.gle/96t7TVPiq9uPuV9H7"
+                      : link ||
+                        "https://docs.google.com/forms/d/1MfVRukCNszqmLORi_UVKajdS6KNKXQW5nXa4b3eEBZs/formrestricted"
                   }
                   target="_blank"
-                  className="absImg"></Link>
+                  className="absImg"
+                ></Link>
               </button>
             </div>
           </div>
@@ -81,7 +85,8 @@ function Footer({ isHome = true, link, ...props }: any) {
             className={`
             copyright pt-[20px] border-t-4
             ${isHome ? "border-greenDark" : "border-green"}
-            `}>
+            `}
+          >
             <div className="flex flex-wrap justify-between">
               <div className="font-FirsNeueMedium mb:w-full mb:text-center mb:mb-[20px]">
                 <p>Copyright 2023 © StrategyCoast®</p>
@@ -90,19 +95,22 @@ function Footer({ isHome = true, link, ...props }: any) {
                 <p>
                   <Link
                     href="https://www.facebook.com/strategycoast"
-                    target="_blank">
+                    target="_blank"
+                  >
                     facebook
                   </Link>{" "}
                   /{" "}
                   <Link
                     href="https://www.instagram.com/hellostrategycoast/"
-                    target="_blank">
+                    target="_blank"
+                  >
                     instagram
                   </Link>{" "}
                   /
                   <Link
                     href="https://www.linkedin.com/company/strategycoast/"
-                    target="_blank">
+                    target="_blank"
+                  >
                     linkedin
                   </Link>
                 </p>
