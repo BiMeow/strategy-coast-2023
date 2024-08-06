@@ -70,7 +70,7 @@ function SectionThinkBanner({ ...props }) {
               <p className="bannerDes text-[20px] mb:text-[16px]">
                 Thời lượng: 2 ngày Thứ Bảy/Chủ Nhật
                 <br />
-                Ngày học: 20-21/9/2024
+                Ngày học: 21-22/9/2024
                 <br />
                 Địa điểm: 28 Thảo Điền, Quận 2, TP. HCM
               </p>
