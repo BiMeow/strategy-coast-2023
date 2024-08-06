@@ -61,9 +61,7 @@ function SectionThinkBanner({ ...props }) {
                 <button className="relative btnMainGreen mb-[30px]">
                   Đăng ký ghi danh
                   <Link
-                    href={
-                      "https://docs.google.com/forms/d/e/1FAIpQLSccLX_r3T17PwKjS4Pbq-wQvOwsRzuoSnCboNfS_uzRN1GLyg/formrestricted"
-                    }
+                    href={"https://forms.gle/96t7TVPiq9uPuV9H7"}
                     target="_blank"
                     className="absImg"
                   />
@@ -72,7 +70,7 @@ function SectionThinkBanner({ ...props }) {
               <p className="bannerDes text-[20px] mb:text-[16px]">
                 Thời lượng: 2 ngày Thứ Bảy/Chủ Nhật
                 <br />
-                Ngày học: 14-15/9/2024
+                Ngày học: 20-21/9/2024
                 <br />
                 Địa điểm: 28 Thảo Điền, Quận 2, TP. HCM
               </p>

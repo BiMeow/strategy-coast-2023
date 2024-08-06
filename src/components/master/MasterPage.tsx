@@ -115,7 +115,11 @@ function MasterPage({
           <Loading />
           <Header isHome={isHome} activeNav={activeNav} />
           <div className={`pageContent`}>{children}</div>
-          <Footer isHome={isHome} link={pageContent?.banner?.buttonLink} />
+          <Footer
+            isThink={isThink}
+            isHome={isHome}
+            link={pageContent?.banner?.buttonLink}
+          />
 
           <noscript
             dangerouslySetInnerHTML={{
