@@ -140,11 +140,11 @@ function SectionBrandBanner({ data, ...props }: any) {
                   />
                 ) : (
                   <p>
-                    Thời lượng: 3 ngày Thứ Bảy (6 buổi)
+                    Thời lượng: 2 ngày Thứ Bảy và Chủ Nhật (6 buổi)
                     <br />
                     Ngày học:{" "}
                     <span className="font-FirsNeueMedium">
-                      14/10, 21/10, 28/10
+                      28-29/09
                     </span>
                     <br />
                     Địa điểm: 28 Thảo Điền, Quận 2, TP. HCM

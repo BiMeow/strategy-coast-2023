@@ -112,7 +112,7 @@ function SectionThinkCourse({ ...props }) {
                     <p className="text-[24px] font-FirsNeueMedium">
                       Early Bird
                     </p>
-                    <p>(Trước ngày 06/07/2024)</p>
+                    <p>(Trước ngày 15/09/2024)</p>
                   </div>
                   <p className="text-[28px] font-FirsNeueBold">4,000,000đ</p>
                 </div>
