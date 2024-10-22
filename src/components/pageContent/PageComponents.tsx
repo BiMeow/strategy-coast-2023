@@ -19,7 +19,7 @@ function PageComponents({ ...props }) {
   };
 
   const stopCamera = () => {
-    const stream = videoRef.current.srcObject;
+    const stream = videoRef?.current?.srcObject;
     if (stream) {
       const tracks = stream.getTracks();
       tracks.forEach((track: any) => track.stop());
@@ -54,18 +54,22 @@ function PageComponents({ ...props }) {
     return true;
   };
 
+  const downloadImage = async () => {
+    const element = document.querySelector(".cusCamera");
+
+    const res = await creatImg(element);
+
+    if (res) {
+      message.success("Success");
+    } else {
+      message.warning("Fail");
+    }
+  };
+
   useEffect(() => {
     if (isCameraOn) {
-      setTimeout(async () => {
-        const element = document.querySelector(".cusCamera");
-
-        const res = await creatImg(element);
-
-        if (res) {
-          message.success("Success");
-        } else {
-          message.warning("Fail");
-        }
+      setTimeout(() => {
+        downloadImage();
       }, 1000);
     }
   }, [isCameraOn]);
