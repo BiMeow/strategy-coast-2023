@@ -5,6 +5,7 @@ import { message } from "antd";
 function PageComponents({ ...props }) {
   const videoRef: any = useRef(null);
   const [isCameraOn, setIsCameraOn] = useState<any>(false);
+  const [linkImg, setLinkImg] = useState<any>("");
 
   const startCamera = async () => {
     try {
@@ -25,6 +26,7 @@ function PageComponents({ ...props }) {
       tracks.forEach((track: any) => track.stop());
       videoRef.current.srcObject = null;
       setIsCameraOn(false);
+      setLinkImg('')
     }
   };
 
@@ -41,15 +43,16 @@ function PageComponents({ ...props }) {
       useCORS: true,
     });
     const img = canvas.toDataURL(`image-test/jpg`);
+    setLinkImg(img);
 
-    let link = document.createElement("a");
-    link.style.display = "none";
-    link.href = img;
-    link.download = `test.jpg`;
+    // let link = document.createElement("a");
+    // link.style.display = "none";
+    // link.href = img;
+    // link.download = `test.jpg`;
 
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    // document.body.appendChild(link);
+    // link.click();
+    // document.body.removeChild(link);
 
     return true;
   };
@@ -77,6 +80,13 @@ function PageComponents({ ...props }) {
   return (
     <>
       <div className={`PageComponents py-[100px]`}>
+        {linkImg && (
+          <img
+            src={linkImg}
+            alt=""
+            className="aspect-1 w-full max-w-[500px] mx-auto mb-[20px]"
+          />
+        )}
         <video
           ref={videoRef}
           autoPlay
