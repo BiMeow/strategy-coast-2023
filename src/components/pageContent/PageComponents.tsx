@@ -26,7 +26,7 @@ function PageComponents({ ...props }) {
       tracks.forEach((track: any) => track.stop());
       videoRef.current.srcObject = null;
       setIsCameraOn(false);
-      setLinkImg('')
+      setLinkImg("");
     }
   };
 
@@ -39,20 +39,20 @@ function PageComponents({ ...props }) {
   const creatImg = async (e: any) => {
     const canvas = await html2canvas(e, {
       scale: 1,
-      allowTaint: true,
+      allowTaint: false,
       useCORS: true,
     });
     const img = canvas.toDataURL(`image-test/jpg`);
     setLinkImg(img);
 
-    // let link = document.createElement("a");
-    // link.style.display = "none";
-    // link.href = img;
-    // link.download = `test.jpg`;
+    let link = document.createElement("a");
+    link.style.display = "none";
+    link.href = img;
+    link.download = `test.jpg`;
 
-    // document.body.appendChild(link);
-    // link.click();
-    // document.body.removeChild(link);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
 
     return true;
   };
@@ -84,15 +84,17 @@ function PageComponents({ ...props }) {
           <img
             src={linkImg}
             alt=""
-            className="aspect-1 w-full max-w-[500px] mx-auto mb-[20px]"
+            className="aspect-1 w-full max-w-[500px] mx-auto mb-[20px] object-cover"
           />
         )}
-        <video
-          ref={videoRef}
-          autoPlay
-          playsInline
-          className="aspect-1 w-full max-w-[500px] mx-auto bg-black mb-[30px] cusCamera"
-        />
+        <div className="cusCamera aspect-1 w-full max-w-[500px] mx-auto bg-black mb-[30px]">
+          <video
+            ref={videoRef}
+            autoPlay
+            playsInline
+            className="size-full object-cover"
+          />
+        </div>
         {!isCameraOn ? (
           <div className="btnMain text-center" onClick={startCamera}>
             Turn Camera On
