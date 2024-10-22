@@ -19,7 +19,7 @@ function PageComponents({ ...props }) {
   };
 
   const stopCamera = () => {
-    const stream = videoRef.current.srcObject;
+    const stream = videoRef?.current?.srcObject;
     if (stream) {
       const tracks = stream.getTracks();
       tracks.forEach((track: any) => track.stop());
