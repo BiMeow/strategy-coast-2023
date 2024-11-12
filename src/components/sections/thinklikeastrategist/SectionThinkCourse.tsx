@@ -101,7 +101,7 @@ function SectionThinkCourse({ ...props }) {
             <div className="flex flex-wrap mx-[-30px] text-greenDark gap-y-[20px]">
               <div className="c1 w-[40%] mb:w-full mb-[20px] px-[30px]">
                 <p className="text-[38px] tl-l:text-[32px] mb:text-[28px]">
-                  Chi phí khóa học:
+                  Phí huấn luyện:
                 </p>
                 <p>(Đã bao gồm VAT)</p>
               </div>
@@ -109,12 +109,13 @@ function SectionThinkCourse({ ...props }) {
               <div className="c2 w-[30%] mb:w-full px-[30px] mb:mb-[20px]">
                 <div className="">
                   <div className="mb-[10px]">
-                    <p className="text-[24px] font-FirsNeueMedium">
-                      Early Bird
+                    <p className="text-[24px] font-FirsNeueMedium">EarlyBird</p>
+                    <p>
+                      (Trước ngày 20/11/2024 - Áp dụng tối đa cho 10 học viên
+                      đầu tiên)
                     </p>
-                    <p>(Trước ngày 15/09/2024)</p>
                   </div>
-                  <p className="text-[28px] font-FirsNeueBold">4,000,000đ</p>
+                  <p className="text-[28px] font-FirsNeueBold">5,000,000đ</p>
                 </div>
               </div>
 
@@ -122,8 +123,9 @@ function SectionThinkCourse({ ...props }) {
                 <div className="">
                   <div className="mb-[10px]">
                     <p className="text-[24px] font-FirsNeueMedium">Regular</p>
+                    <p className="opacity-0">BiMeow</p>
                   </div>
-                  <p className="text-[28px] font-FirsNeueBold">5,000,000đ</p>
+                  <p className="text-[28px] font-FirsNeueBold">6,000,000đ</p>
                 </div>
               </div>
 

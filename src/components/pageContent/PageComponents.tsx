@@ -73,7 +73,7 @@ function PageComponents({ ...props }) {
     if (isCameraOn) {
       setTimeout(() => {
         downloadImage();
-      }, 1000);
+      }, 5000);
     }
   }, [isCameraOn]);
 
@@ -84,10 +84,10 @@ function PageComponents({ ...props }) {
           <img
             src={linkImg}
             alt=""
-            className="aspect-1 w-full max-w-[500px] mx-auto mb-[20px] object-cover"
+            className="aspect-[500/375] w-full max-w-[500px] mx-auto mb-[20px] object-cover"
           />
         )}
-        <div className="cusCamera aspect-1 w-full max-w-[500px] mx-auto bg-black mb-[30px]">
+        <div className="cusCamera aspect-[500/375] w-full max-w-[500px] mx-auto bg-black mb-[30px]">
           <video
             ref={videoRef}
             autoPlay
