@@ -1,6 +1,7 @@
 import html2canvas from "html2canvas";
 import { memo, useEffect, useRef, useState } from "react";
 import { message } from "antd";
+import FormExportTicket from "@/components/elements/FormExportTicket";
 
 function PageComponents({ ...props }) {
   const videoRef: any = useRef(null);
@@ -79,7 +80,7 @@ function PageComponents({ ...props }) {
 
   return (
     <>
-      <div className={`PageComponents py-[100px]`}>
+      <div className={`PageComponents px-[20px] py-[100px]`}>
         {linkImg && (
           <img
             src={linkImg}
@@ -104,6 +105,9 @@ function PageComponents({ ...props }) {
             Turn Camera Off
           </div>
         )}
+        <hr className="my-[30px] border-black"/>
+        <h2 className="text-center text-[60px]">Export Image</h2>
+        <FormExportTicket />
       </div>
     </>
   );
