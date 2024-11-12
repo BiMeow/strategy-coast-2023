@@ -99,14 +99,14 @@ function SectionThinkCourse({ ...props }) {
 
           <div className="px-[40px] py-[60px] mb:p-[30px] bg-green border-4 border-green rounded-[50px] mb:rounded-[30px] mb-[15px] fadeUp">
             <div className="flex flex-wrap mx-[-30px] text-greenDark gap-y-[20px]">
-              <div className="c1 w-[40%] mb:w-full mb-[20px] px-[30px]">
+              <div className="c1 w-[30%] mb:w-full mb-[20px] px-[30px]">
                 <p className="text-[38px] tl-l:text-[32px] mb:text-[28px]">
                   Phí huấn luyện:
                 </p>
                 <p>(Đã bao gồm VAT)</p>
               </div>
 
-              <div className="c2 w-[30%] mb:w-full px-[30px] mb:mb-[20px]">
+              <div className="c2 w-[40%] mb:w-full px-[30px] mb:mb-[20px]">
                 <div className="">
                   <div className="mb-[10px]">
                     <p className="text-[24px] font-FirsNeueMedium">EarlyBird</p>
@@ -129,7 +129,7 @@ function SectionThinkCourse({ ...props }) {
                 </div>
               </div>
 
-              <div className="c4 w-[60%] ml-auto mb:w-full px-[30px]">
+              <div className="c4 w-[70%] ml-auto mb:w-full px-[30px]">
                 <div className="">
                   <div className="mb-[10px]">
                     <p className="text-[24px] font-FirsNeueMedium mb-[10px]">
