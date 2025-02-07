@@ -70,7 +70,7 @@ function SectionThinkBanner({ ...props }) {
               <p className="bannerDes text-[20px] mb:text-[16px]">
                 {/* Thời lượng: 2 ngày Thứ Bảy/Chủ Nhật
                 <br /> */}
-                Ngày học tại Hà Nội: 07 - 08/12/2024 (Thứ 7 & Chủ Nhật)
+                Ngày học tại Hà Nội: 08 - 09/03/2025 (Thứ 7 & Chủ Nhật)
               </p>
             </div>
           </div>
